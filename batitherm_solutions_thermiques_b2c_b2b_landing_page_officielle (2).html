@@ -1,0 +1,3846 @@
+<!DOCTYPE html>
+<html lang="fr" dir="ltr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>BATITHERM | Solutions d'Eau Chaude Sanitaire & Chauffage au Maroc (Depuis 1999)</title>
+  <meta name="description" content="Spécialiste marocain des solutions thermiques depuis plus de 25 ans : chauffe-eaux solaires thermiques, thermodynamiques, pompes à chaleur, chaudières Sime et ballons de stockage pour particuliers et professionnels." />
+  <meta name="robots" content="index, follow" />
+  <link rel="canonical" href="https://batitherm.ma/" />
+
+  <!-- Open Graph / Social Sharing Metadata -->
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="BATITHERM — Solutions Thermiques pour l'Habitat et les Projets Professionnels" />
+  <meta property="og:description" content="Eau chaude sanitaire et chauffage au Maroc depuis 1999. Étude de besoin pour particuliers (villas, appartements) et accompagnement technique B2B." />
+  <meta property="og:url" content="https://batitherm.ma/" />
+  <meta property="og:image" content="assets/og-batitherm-thermal.webp" />
+
+  <!-- Google Fonts: Plus Jakarta Sans (Architectural Headings) & Inter (Technical Body) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@600;700;800&display=swap" rel="stylesheet" />
+
+  <style>
+    /* ==========================================================================
+       1. PREMIUM DESIGN TOKENS & BRAND PALETTE
+       ========================================================================== */
+    :root {
+      /* Official Brand-Book HEX Colors */
+      --brand-yellow: #FECE18;
+      --brand-orange: #F97F06;
+      --brand-blue: #2751CB;
+      --brand-green: #40B225;
+      --brand-black: #000000;
+
+      /* Refined Architectural Neutral Palette */
+      --bg-pure: #FFFFFF;
+      --bg-stone: #FAF9F6;
+      --bg-stone-deep: #F2EFE9;
+      --bg-dark: #0B0D13;
+      --bg-dark-elevated: #141822;
+      
+      --text-primary: #0F1115;
+      --text-secondary: #4A505C;
+      --text-muted: #767D8C;
+      --text-on-dark: #FFFFFF;
+      --text-muted-on-dark: #9CA3B5;
+
+      --border-hairline: rgba(15, 17, 21, 0.08);
+      --border-strong: rgba(15, 17, 21, 0.14);
+      --border-dark: rgba(255, 255, 255, 0.1);
+
+      /* Contextual Semantic Tokens (Dynamic per Audience) */
+      --active-accent: var(--brand-orange);
+      --active-accent-soft: rgba(249, 127, 6, 0.08);
+      --error-color: #D92D20;
+      --error-bg: #FEF3F2;
+
+      /* Typography */
+      --font-display: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+      --font-sans: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+
+      /* Layout, Smooth Radii & Soft Luxury Shadows */
+      --container-max: 1240px;
+      --header-height: 80px;
+      --radius-sm: 10px;
+      --radius-md: 16px;
+      --radius-lg: 24px;
+      --transition-fast: 220ms cubic-bezier(0.16, 1, 0.3, 1);
+      --transition-smooth: 400ms cubic-bezier(0.16, 1, 0.3, 1);
+      --shadow-architectural: 0 10px 30px -10px rgba(15, 17, 21, 0.06), 0 4px 12px -2px rgba(15, 17, 21, 0.03);
+      --shadow-elevated: 0 24px 48px -12px rgba(15, 17, 21, 0.12), 0 8px 20px -6px rgba(15, 17, 21, 0.05);
+    }
+
+    body[data-audience="b2b"] {
+      --active-accent: var(--brand-blue);
+      --active-accent-soft: rgba(39, 81, 203, 0.08);
+    }
+
+    /* ==========================================================================
+       2. RESET, ACCESSIBILITY & BASE STYLES
+       ========================================================================== */
+    *, *::before, *::after {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html {
+      scroll-behavior: smooth;
+      scroll-padding-top: calc(var(--header-height) + 24px);
+      font-size: 16px;
+      -webkit-text-size-adjust: 100%;
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      html { scroll-behavior: auto; }
+      *, *::before, *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+      }
+    }
+
+    body {
+      font-family: var(--font-sans);
+      color: var(--text-primary);
+      background-color: var(--bg-stone);
+      line-height: 1.6;
+      overflow-x: hidden;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    img, svg {
+      display: block;
+      max-width: 100%;
+      height: auto;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    button, input, select, textarea {
+      font-family: inherit;
+      font-size: inherit;
+      color: inherit;
+    }
+
+    button {
+      cursor: pointer;
+      border: none;
+      background: none;
+    }
+
+    :focus-visible {
+      outline: 3px solid var(--brand-blue);
+      outline-offset: 2px;
+    }
+
+    .skip-link {
+      position: absolute;
+      top: -100px;
+      left: 16px;
+      background: var(--brand-yellow);
+      color: var(--brand-black);
+      font-weight: 700;
+      padding: 12px 20px;
+      z-index: 9999;
+      border-radius: var(--radius-sm);
+    }
+
+    .skip-link:focus { top: 16px; }
+
+    .container {
+      width: 100%;
+      max-width: var(--container-max);
+      margin: 0 auto;
+      padding: 0 24px;
+    }
+
+    @media (min-width: 768px) {
+      .container { padding: 0 40px; }
+    }
+
+    /* Audience Visibility Utility Rules */
+    [data-audience="b2c"] .b2b-only { display: none !important; }
+    [data-audience="b2b"] .b2c-only { display: none !important; }
+
+    /* Refined Pill Eyebrow */
+    .tech-eyebrow {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      font-family: var(--font-sans);
+      font-size: 0.75rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      color: var(--text-secondary);
+      padding: 6px 14px;
+      background: var(--bg-pure);
+      border: 1px solid var(--border-strong);
+      border-radius: 999px;
+      margin-bottom: 18px;
+      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.02);
+    }
+
+    .tech-eyebrow__dot {
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      background-color: var(--active-accent);
+      transition: background-color var(--transition-fast);
+    }
+
+    .section-title {
+      font-family: var(--font-display);
+      font-size: clamp(1.85rem, 3.2vw, 2.75rem);
+      font-weight: 800;
+      line-height: 1.15;
+      letter-spacing: -0.03em;
+      color: var(--text-primary);
+      margin-bottom: 14px;
+    }
+
+    .section-subtitle {
+      font-size: clamp(1rem, 1.15vw, 1.125rem);
+      color: var(--text-secondary);
+      max-width: 58ch;
+      line-height: 1.65;
+    }
+
+    /* Smooth Premium Buttons */
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      font-family: var(--font-display);
+      font-weight: 700;
+      font-size: 0.94rem;
+      line-height: 1.2;
+      padding: 15px 26px;
+      border-radius: 999px;
+      transition: all var(--transition-fast);
+      text-align: center;
+      min-height: 48px;
+    }
+
+    .btn--primary {
+      background-color: var(--brand-yellow);
+      color: var(--brand-black);
+      border: 1px solid rgba(0, 0, 0, 0.12);
+      box-shadow: 0 8px 20px -4px rgba(254, 206, 24, 0.55);
+    }
+
+    .btn--primary:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 12px 26px -4px rgba(254, 206, 24, 0.75);
+      background-color: #ffd633;
+    }
+
+    .btn--primary:active {
+      transform: translateY(0);
+    }
+
+    .btn--secondary {
+      background-color: var(--bg-pure);
+      color: var(--text-primary);
+      border: 1px solid var(--border-strong);
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.03);
+    }
+
+    .btn--secondary:hover {
+      background-color: var(--bg-stone);
+      border-color: var(--text-primary);
+      transform: translateY(-1px);
+    }
+
+    .btn--blue {
+      background-color: var(--brand-blue);
+      color: #FFFFFF;
+      border: 1px solid var(--brand-blue);
+      box-shadow: 0 8px 20px -4px rgba(39, 81, 203, 0.45);
+    }
+
+    .btn--blue:hover {
+      background-color: #1e42ab;
+      transform: translateY(-2px);
+    }
+
+    /* ==========================================================================
+       3. SECTION 1 — HEADER & NAVIGATION
+       ========================================================================== */
+    .site-header {
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      height: var(--header-height);
+      background-color: rgba(255, 255, 255, 0.88);
+      backdrop-filter: blur(16px);
+      -webkit-backdrop-filter: blur(16px);
+      border-bottom: 1px solid var(--border-hairline);
+    }
+
+    .header-inner {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      height: 100%;
+      gap: 16px;
+    }
+
+    .brand-logo-wrap {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+    }
+
+    .brand-logo-img {
+      height: 40px;
+      width: auto;
+      object-fit: contain;
+    }
+
+    .logo-fallback-slot {
+      display: none;
+      align-items: center;
+      gap: 8px;
+      padding: 6px 14px;
+      border: 1px solid var(--border-strong);
+      border-radius: var(--radius-sm);
+      background: var(--bg-stone);
+      font-family: var(--font-display);
+      font-weight: 800;
+      font-size: 0.95rem;
+      color: var(--brand-black);
+    }
+
+    .brand-heritage-tag {
+      display: none;
+      font-size: 0.72rem;
+      font-weight: 600;
+      color: var(--text-muted);
+      border-left: 1px solid var(--border-strong);
+      padding-left: 14px;
+      line-height: 1.3;
+    }
+
+    @media (min-width: 1024px) {
+      .brand-heritage-tag { display: block; }
+    }
+
+    .main-nav {
+      display: none;
+      align-items: center;
+      gap: 32px;
+    }
+
+    @media (min-width: 960px) {
+      .main-nav { display: flex; }
+    }
+
+    .main-nav__link {
+      font-size: 0.9rem;
+      font-weight: 600;
+      color: var(--text-secondary);
+      transition: color var(--transition-fast);
+      position: relative;
+      padding: 4px 0;
+    }
+
+    .main-nav__link:hover {
+      color: var(--text-primary);
+    }
+
+    .main-nav__link::after {
+      content: '';
+      position: absolute;
+      bottom: -2px;
+      left: 0;
+      width: 0;
+      height: 2px;
+      border-radius: 2px;
+      background-color: var(--active-accent);
+      transition: width var(--transition-fast);
+    }
+
+    .main-nav__link:hover::after {
+      width: 100%;
+    }
+
+    .header-actions {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+
+    .header-mode-pill {
+      display: none;
+      align-items: center;
+      background: var(--bg-stone-deep);
+      border: 1px solid var(--border-hairline);
+      border-radius: 999px;
+      padding: 4px;
+    }
+
+    @media (min-width: 640px) {
+      .header-mode-pill { display: inline-flex; }
+    }
+
+    .header-mode-btn {
+      font-size: 0.76rem;
+      font-weight: 700;
+      padding: 6px 14px;
+      border-radius: 999px;
+      color: var(--text-secondary);
+      transition: all var(--transition-fast);
+    }
+
+    .header-mode-btn[aria-pressed="true"] {
+      background: var(--bg-pure);
+      color: var(--text-primary);
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+    }
+
+    .header-cta {
+      padding: 10px 20px;
+      font-size: 0.85rem;
+      min-height: 40px;
+    }
+
+    .mobile-menu-toggle {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 42px;
+      height: 42px;
+      border: 1px solid var(--border-strong);
+      border-radius: 50%;
+      background: var(--bg-pure);
+    }
+
+    @media (min-width: 960px) {
+      .mobile-menu-toggle { display: none; }
+    }
+
+    .mobile-drawer {
+      display: none;
+      background: var(--bg-pure);
+      border-bottom: 1px solid var(--border-strong);
+      padding: 24px;
+      box-shadow: var(--shadow-elevated);
+    }
+
+    .mobile-drawer.is-open { display: block; }
+
+    .mobile-drawer__nav {
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+      margin-bottom: 20px;
+    }
+
+    .mobile-drawer__link {
+      font-family: var(--font-display);
+      font-weight: 700;
+      font-size: 1.05rem;
+      padding: 8px 0;
+      border-bottom: 1px solid var(--border-hairline);
+    }
+
+    /* ==========================================================================
+       4. SECTION 2 — PREMIUM HERO WITH DUAL-AUDIENCE SELECTOR
+       ========================================================================== */
+    .hero-section {
+      position: relative;
+      background: radial-gradient(circle at 85% 15%, rgba(254, 206, 24, 0.12), transparent 45%),
+                  radial-gradient(circle at 10% 80%, var(--active-accent-soft), transparent 50%),
+                  var(--bg-pure);
+      border-bottom: 1px solid var(--border-hairline);
+      padding: 48px 0 76px;
+      overflow: hidden;
+    }
+
+    .hero-grid {
+      position: relative;
+      z-index: 1;
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 44px;
+      align-items: center;
+    }
+
+    @media (min-width: 1024px) {
+      .hero-section { padding: 68px 0 96px; }
+      .hero-grid {
+        grid-template-columns: 1.08fr 0.92fr;
+        gap: 64px;
+      }
+    }
+
+    .hero-title {
+      font-family: var(--font-display);
+      font-size: clamp(2.15rem, 3.8vw, 3.35rem);
+      font-weight: 800;
+      line-height: 1.1;
+      letter-spacing: -0.035em;
+      color: var(--text-primary);
+      margin-bottom: 18px;
+    }
+
+    .hero-title__highlight {
+      display: inline;
+      background: linear-gradient(180deg, transparent 65%, rgba(254, 206, 24, 0.65) 65%);
+      padding: 0 2px;
+    }
+
+    .hero-lead {
+      font-size: clamp(1.02rem, 1.2vw, 1.15rem);
+      color: var(--text-secondary);
+      margin-bottom: 28px;
+      max-width: 54ch;
+      line-height: 1.65;
+    }
+
+    /* Sleek Profile Selector Cards */
+    .audience-selector-box {
+      background: var(--bg-stone);
+      border: 1px solid var(--border-strong);
+      border-radius: var(--radius-md);
+      padding: 18px;
+      margin-bottom: 28px;
+      box-shadow: var(--shadow-architectural);
+    }
+
+    .audience-selector-label {
+      font-family: var(--font-display);
+      font-size: 0.76rem;
+      font-weight: 800;
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+      color: var(--text-secondary);
+      margin-bottom: 12px;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .audience-cards-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 12px;
+    }
+
+    @media (min-width: 560px) {
+      .audience-cards-grid { grid-template-columns: 1fr 1fr; }
+    }
+
+    .audience-card-btn {
+      position: relative;
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      text-align: left;
+      padding: 16px 18px;
+      background: var(--bg-pure);
+      border: 1.5px solid var(--border-hairline);
+      border-radius: var(--radius-sm);
+      transition: all var(--transition-fast);
+    }
+
+    .audience-card-btn:hover {
+      border-color: var(--border-strong);
+      transform: translateY(-1px);
+    }
+
+    .audience-card-btn[aria-pressed="true"][data-target="b2c"] {
+      border-color: var(--brand-orange);
+      background: #FFFFFF;
+      box-shadow: 0 8px 20px -6px rgba(249, 127, 6, 0.18);
+    }
+
+    .audience-card-btn[aria-pressed="true"][data-target="b2b"] {
+      border-color: var(--brand-blue);
+      background: #FFFFFF;
+      box-shadow: 0 8px 20px -6px rgba(39, 81, 203, 0.18);
+    }
+
+    .audience-card-btn__top {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      width: 100%;
+      margin-bottom: 4px;
+    }
+
+    .audience-card-btn__title {
+      font-family: var(--font-display);
+      font-weight: 800;
+      font-size: 0.98rem;
+      color: var(--text-primary);
+    }
+
+    .audience-card-btn__indicator {
+      width: 18px;
+      height: 18px;
+      border-radius: 50%;
+      border: 2px solid var(--border-strong);
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      transition: all var(--transition-fast);
+    }
+
+    .audience-card-btn[aria-pressed="true"][data-target="b2c"] .audience-card-btn__indicator {
+      border-color: var(--brand-orange);
+      background-color: var(--brand-orange);
+    }
+
+    .audience-card-btn[aria-pressed="true"][data-target="b2b"] .audience-card-btn__indicator {
+      border-color: var(--brand-blue);
+      background-color: var(--brand-blue);
+    }
+
+    .audience-card-btn[aria-pressed="true"] .audience-card-btn__indicator::after {
+      content: '';
+      width: 6px;
+      height: 6px;
+      border-radius: 50%;
+      background: #FFFFFF;
+    }
+
+    .audience-card-btn__desc {
+      font-size: 0.8rem;
+      color: var(--text-secondary);
+      line-height: 1.4;
+    }
+
+    .hero-cta-row {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      gap: 14px;
+    }
+
+    /* Hero Right Column: Modern Glass & Dark Showcase Card */
+    .hero-visual-frame {
+      background: var(--bg-dark);
+      border: 1px solid rgba(255, 255, 255, 0.12);
+      border-radius: var(--radius-lg);
+      overflow: hidden;
+      box-shadow: var(--shadow-elevated);
+    }
+
+    .hero-visual-header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 14px 22px;
+      background: rgba(255, 255, 255, 0.03);
+      border-bottom: 1px solid var(--border-dark);
+      color: #FFFFFF;
+      font-size: 0.72rem;
+      font-weight: 600;
+      letter-spacing: 0.06em;
+    }
+
+    .hero-visual-header__status {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      color: var(--brand-yellow);
+    }
+
+    .media-slot {
+      position: relative;
+      aspect-ratio: 4 / 3;
+      background: radial-gradient(circle at 20% 20%, #1F2637 0%, #0B0D13 100%);
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      padding: 28px;
+      color: #FFFFFF;
+      overflow: hidden;
+    }
+
+    .media-slot__real-img {
+      position: absolute;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      z-index: 1;
+    }
+
+    .media-slot__blueprint-overlay {
+      position: relative;
+      z-index: 2;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      height: 100%;
+      pointer-events: none;
+    }
+
+    .blueprint-diagram {
+      margin: auto;
+      width: 100%;
+      max-width: 400px;
+      border: 1px solid rgba(255, 255, 255, 0.14);
+      background: rgba(15, 18, 26, 0.75);
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
+      padding: 24px;
+      border-radius: var(--radius-md);
+      box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+    }
+
+    .blueprint-diagram__title {
+      font-family: var(--font-display);
+      font-size: 0.8rem;
+      font-weight: 700;
+      color: var(--brand-yellow);
+      margin-bottom: 14px;
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+    }
+
+    .blueprint-diagram__list {
+      list-style: none;
+      display: grid;
+      gap: 10px;
+      font-size: 0.84rem;
+      color: #E2E8F0;
+    }
+
+    .blueprint-diagram__list li {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+      padding-bottom: 8px;
+    }
+
+    .blueprint-diagram__list li:last-child {
+      border-bottom: none;
+      padding-bottom: 0;
+    }
+
+    .hero-visual-footer {
+      padding: 16px 24px;
+      background: var(--bg-pure);
+      border-top: 1px solid var(--border-hairline);
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: space-between;
+      gap: 12px;
+    }
+
+    .arabic-motto {
+      font-size: 0.92rem;
+      font-weight: 700;
+      color: var(--text-primary);
+      direction: rtl;
+    }
+
+    /* ==========================================================================
+       5. SECTION 3 — TRUST & VERIFIED CREDENTIALS BAR
+       ========================================================================== */
+    .trust-section {
+      background-color: var(--bg-dark);
+      color: #FFFFFF;
+      padding: 48px 0;
+    }
+
+    .trust-metrics-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 28px;
+      padding-bottom: 36px;
+      border-bottom: 1px solid var(--border-dark);
+    }
+
+    @media (min-width: 900px) {
+      .trust-metrics-grid { grid-template-columns: repeat(4, 1fr); }
+    }
+
+    .trust-metric-card {
+      border-left: 3px solid var(--brand-orange);
+      padding-left: 18px;
+    }
+
+    .trust-metric-card:nth-child(2) { border-left-color: var(--brand-yellow); }
+    .trust-metric-card:nth-child(3) { border-left-color: var(--brand-blue); }
+    .trust-metric-card:nth-child(4) { border-left-color: var(--brand-green); }
+
+    .trust-metric__number {
+      font-family: var(--font-display);
+      font-size: clamp(1.85rem, 2.8vw, 2.4rem);
+      font-weight: 800;
+      line-height: 1.05;
+      color: #FFFFFF;
+      margin-bottom: 6px;
+    }
+
+    .trust-metric__label {
+      font-size: 0.84rem;
+      color: var(--text-muted-on-dark);
+      line-height: 1.4;
+    }
+
+    .trust-references-row {
+      padding-top: 28px;
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: space-between;
+      gap: 20px;
+    }
+
+    .trust-ref-group {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .trust-ref-group__title {
+      font-size: 0.74rem;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      color: var(--text-muted-on-dark);
+      font-weight: 700;
+      margin-right: 6px;
+    }
+
+    .ref-pill {
+      display: inline-flex;
+      align-items: center;
+      padding: 6px 14px;
+      background: rgba(255, 255, 255, 0.05);
+      border: 1px solid var(--border-dark);
+      border-radius: 999px;
+      font-family: var(--font-display);
+      font-size: 0.82rem;
+      font-weight: 600;
+      color: #FFFFFF;
+    }
+
+    .ref-pill--retail {
+      border-color: rgba(254, 206, 24, 0.35);
+      color: var(--brand-yellow);
+    }
+
+    /* ==========================================================================
+       6. SECTION 4 — AUDIENCE-SPECIFIC EXPERIENCES (LIGHTER & CLEANER)
+       ========================================================================== */
+    .experience-section {
+      padding: 84px 0;
+      background-color: var(--bg-stone);
+      border-bottom: 1px solid var(--border-hairline);
+    }
+
+    .experience-header {
+      margin-bottom: 44px;
+    }
+
+    .diagnostic-cards-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 24px;
+    }
+
+    @media (min-width: 768px) {
+      .diagnostic-cards-grid { grid-template-columns: repeat(2, 1fr); }
+    }
+
+    .diagnostic-card {
+      background: var(--bg-pure);
+      border: 1px solid var(--border-hairline);
+      border-radius: var(--radius-md);
+      padding: 32px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      box-shadow: var(--shadow-architectural);
+      transition: all var(--transition-fast);
+    }
+
+    .diagnostic-card:hover {
+      border-color: var(--border-strong);
+      transform: translateY(-4px);
+      box-shadow: var(--shadow-elevated);
+    }
+
+    .diagnostic-card--highlight {
+      border: 1.5px solid var(--active-accent);
+      background: linear-gradient(180deg, #FFFFFF 0%, #FFFDF9 100%);
+    }
+
+    .diagnostic-card__tag {
+      display: inline-flex;
+      align-items: center;
+      font-size: 0.72rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+      padding: 5px 12px;
+      border-radius: 999px;
+      margin-bottom: 16px;
+      align-self: flex-start;
+    }
+
+    .tag--orange {
+      background: rgba(249, 127, 6, 0.1);
+      color: #C86200;
+    }
+
+    .tag--green {
+      background: rgba(64, 178, 37, 0.1);
+      color: #267812;
+    }
+
+    .tag--blue {
+      background: rgba(39, 81, 203, 0.1);
+      color: var(--brand-blue);
+    }
+
+    .diagnostic-card__title {
+      font-family: var(--font-display);
+      font-size: 1.25rem;
+      font-weight: 800;
+      color: var(--text-primary);
+      margin-bottom: 10px;
+      line-height: 1.3;
+    }
+
+    .diagnostic-card__problem {
+      font-size: 0.92rem;
+      color: var(--text-secondary);
+      margin-bottom: 18px;
+    }
+
+    .diagnostic-card__solution-box {
+      background: var(--bg-stone);
+      border-left: 3px solid var(--active-accent);
+      border-radius: 0 var(--radius-sm) var(--radius-sm) 0;
+      padding: 12px 16px;
+      margin-bottom: 22px;
+      font-size: 0.86rem;
+      color: var(--text-primary);
+    }
+
+    .diagnostic-card__action {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      font-family: var(--font-display);
+      font-size: 0.88rem;
+      font-weight: 800;
+      color: var(--active-accent);
+      padding-top: 14px;
+      border-top: 1px solid var(--border-hairline);
+      text-align: left;
+      transition: gap var(--transition-fast);
+    }
+
+    .diagnostic-card__action:hover {
+      gap: 12px;
+    }
+
+    /* ==========================================================================
+       7. SECTION 5 — INTERACTIVE THERMAL SOLUTION DISCOVERY
+       ========================================================================== */
+    .solutions-section {
+      padding: 88px 0;
+      background-color: var(--bg-pure);
+      border-bottom: 1px solid var(--border-hairline);
+    }
+
+    .solutions-toolbar {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: space-between;
+      gap: 16px;
+      margin: 32px 0 40px;
+      padding: 10px 14px;
+      background: var(--bg-stone);
+      border: 1px solid var(--border-hairline);
+      border-radius: 999px;
+    }
+
+    .filter-tabs {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 6px;
+    }
+
+    .filter-tab-btn {
+      font-family: var(--font-display);
+      font-size: 0.84rem;
+      font-weight: 700;
+      padding: 9px 18px;
+      border-radius: 999px;
+      background: transparent;
+      color: var(--text-secondary);
+      transition: all var(--transition-fast);
+    }
+
+    .filter-tab-btn:hover {
+      color: var(--text-primary);
+    }
+
+    .filter-tab-btn[aria-selected="true"] {
+      background: var(--text-primary);
+      color: #FFFFFF;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.12);
+    }
+
+    .scope-notice {
+      font-size: 0.78rem;
+      color: var(--text-muted);
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      padding-right: 10px;
+    }
+
+    .solutions-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 28px;
+    }
+
+    @media (min-width: 680px) {
+      .solutions-grid { grid-template-columns: repeat(2, 1fr); }
+    }
+
+    @media (min-width: 1080px) {
+      .solutions-grid { grid-template-columns: repeat(3, 1fr); }
+    }
+
+    .solution-card {
+      background: var(--bg-pure);
+      border: 1px solid var(--border-hairline);
+      border-radius: var(--radius-md);
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+      box-shadow: var(--shadow-architectural);
+      transition: all var(--transition-fast);
+    }
+
+    .solution-card:hover {
+      border-color: var(--border-strong);
+      transform: translateY(-4px);
+      box-shadow: var(--shadow-elevated);
+    }
+
+    .solution-card.is-hidden { display: none !important; }
+
+    .solution-card.is-spotlighted {
+      border: 2px solid var(--brand-green);
+      box-shadow: 0 0 0 4px rgba(64, 178, 37, 0.14);
+    }
+
+    .solution-card__media {
+      position: relative;
+      aspect-ratio: 16 / 10;
+      background: linear-gradient(135deg, var(--bg-stone) 0%, var(--bg-stone-deep) 100%);
+      border-bottom: 1px solid var(--border-hairline);
+      padding: 16px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      overflow: hidden;
+    }
+
+    .solution-card__img {
+      position: absolute;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      z-index: 1;
+      transition: transform var(--transition-smooth);
+    }
+
+    .solution-card:hover .solution-card__img {
+      transform: scale(1.03);
+    }
+
+    .solution-card__media-top {
+      position: relative;
+      z-index: 2;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .solution-category-badge {
+      font-size: 0.68rem;
+      font-weight: 800;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      padding: 5px 10px;
+      border-radius: 999px;
+      background: rgba(15, 17, 21, 0.85);
+      backdrop-filter: blur(6px);
+      color: #FFFFFF;
+    }
+
+    .solution-category-badge--renewable {
+      background: var(--brand-green);
+      color: #FFFFFF;
+    }
+
+    .solution-category-badge--heating {
+      background: var(--brand-orange);
+      color: #FFFFFF;
+    }
+
+    .solution-category-badge--b2b {
+      background: var(--brand-blue);
+      color: #FFFFFF;
+    }
+
+    .solution-card__schematic {
+      position: relative;
+      z-index: 2;
+      margin: auto;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 54px;
+      height: 54px;
+      border-radius: 50%;
+      background: rgba(255, 255, 255, 0.92);
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.06);
+      color: var(--text-primary);
+    }
+
+    .solution-card__body {
+      padding: 24px;
+      display: flex;
+      flex-direction: column;
+      flex-grow: 1;
+    }
+
+    .solution-card__title {
+      font-family: var(--font-display);
+      font-size: 1.15rem;
+      font-weight: 800;
+      color: var(--text-primary);
+      margin-bottom: 8px;
+    }
+
+    .solution-card__summary {
+      font-size: 0.88rem;
+      color: var(--text-secondary);
+      margin-bottom: 18px;
+      flex-grow: 1;
+      line-height: 1.55;
+    }
+
+    .solution-details-toggle {
+      width: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 10px 14px;
+      background: var(--bg-stone);
+      border: 1px solid var(--border-hairline);
+      border-radius: var(--radius-sm);
+      font-size: 0.8rem;
+      font-weight: 700;
+      color: var(--text-primary);
+      margin-bottom: 12px;
+      transition: background-color var(--transition-fast);
+    }
+
+    .solution-details-toggle:hover {
+      background: var(--bg-stone-deep);
+    }
+
+    .solution-details-panel {
+      display: none;
+      padding: 14px;
+      background: var(--bg-stone);
+      border: 1px solid var(--border-hairline);
+      border-radius: var(--radius-sm);
+      margin-bottom: 14px;
+      font-size: 0.8rem;
+      color: var(--text-secondary);
+    }
+
+    .solution-details-panel.is-open { display: block; }
+
+    .solution-details-panel ul {
+      padding-left: 16px;
+      display: grid;
+      gap: 6px;
+    }
+
+    .solution-select-btn {
+      width: 100%;
+      padding: 12px 16px;
+      font-family: var(--font-display);
+      font-size: 0.84rem;
+      font-weight: 800;
+      background: var(--bg-pure);
+      border: 1.5px solid var(--border-strong);
+      border-radius: 999px;
+      color: var(--text-primary);
+      transition: all var(--transition-fast);
+    }
+
+    .solution-select-btn:hover {
+      background: var(--brand-yellow);
+      border-color: var(--brand-yellow);
+      color: var(--brand-black);
+      transform: translateY(-1px);
+    }
+
+    /* ==========================================================================
+       8. SECTION 6 — WHY BATITHERM (CLEAN & STREAMLINED)
+       ========================================================================== */
+    .why-section {
+      padding: 84px 0;
+      background-color: var(--bg-stone-deep);
+      border-bottom: 1px solid var(--border-hairline);
+    }
+
+    .pillars-grid {
+      margin-top: 40px;
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 24px;
+    }
+
+    @media (min-width: 768px) {
+      .pillars-grid { grid-template-columns: repeat(2, 1fr); }
+    }
+
+    @media (min-width: 1080px) {
+      .pillars-grid { grid-template-columns: repeat(4, 1fr); }
+    }
+
+    .pillar-item {
+      background: var(--bg-pure);
+      border: 1px solid var(--border-hairline);
+      padding: 28px 24px;
+      border-radius: var(--radius-md);
+      box-shadow: var(--shadow-architectural);
+      transition: transform var(--transition-fast);
+    }
+
+    .pillar-item:hover {
+      transform: translateY(-3px);
+    }
+
+    .pillar-item__num {
+      font-family: var(--font-display);
+      font-size: 0.74rem;
+      font-weight: 800;
+      letter-spacing: 0.06em;
+      color: var(--active-accent);
+      margin-bottom: 10px;
+    }
+
+    .pillar-item__title {
+      font-family: var(--font-display);
+      font-size: 1.1rem;
+      font-weight: 800;
+      margin-bottom: 10px;
+      line-height: 1.3;
+    }
+
+    .pillar-item__desc {
+      font-size: 0.88rem;
+      color: var(--text-secondary);
+      line-height: 1.55;
+    }
+
+    /* ==========================================================================
+       9. SECTION 7 — PROGRESSIVE LEAD QUALIFICATION FORM (100% PRESERVED LOGIC)
+       ========================================================================== */
+    .qualification-section {
+      padding: 88px 0;
+      background-color: var(--bg-pure);
+      border-bottom: 1px solid var(--border-hairline);
+    }
+
+    .qual-layout {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 44px;
+      align-items: start;
+    }
+
+    @media (min-width: 1024px) {
+      .qual-layout {
+        grid-template-columns: 0.82fr 1.18fr;
+        gap: 60px;
+      }
+    }
+
+    .qual-sidebar {
+      background: var(--bg-stone);
+      border: 1px solid var(--border-strong);
+      border-radius: var(--radius-md);
+      padding: 28px;
+      box-shadow: var(--shadow-architectural);
+    }
+
+    .process-steps-list {
+      list-style: none;
+      display: grid;
+      gap: 18px;
+      margin-top: 20px;
+    }
+
+    .process-step-li {
+      display: grid;
+      grid-template-columns: 32px 1fr;
+      gap: 14px;
+      align-items: start;
+    }
+
+    .process-step-li__num {
+      width: 32px;
+      height: 32px;
+      border-radius: 50%;
+      background: var(--text-primary);
+      color: var(--brand-yellow);
+      font-family: var(--font-display);
+      font-weight: 800;
+      font-size: 0.84rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .process-step-li__title {
+      font-family: var(--font-display);
+      font-weight: 700;
+      font-size: 0.94rem;
+      margin-bottom: 2px;
+    }
+
+    .process-step-li__desc {
+      font-size: 0.82rem;
+      color: var(--text-secondary);
+    }
+
+    /* Form Container */
+    .form-card {
+      background: var(--bg-pure);
+      border: 1px solid var(--border-strong);
+      border-radius: var(--radius-lg);
+      box-shadow: var(--shadow-elevated);
+      overflow: hidden;
+    }
+
+    .form-card__top-tabs {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      background: var(--bg-stone);
+      padding: 6px;
+      gap: 6px;
+      border-bottom: 1px solid var(--border-hairline);
+    }
+
+    .form-audience-tab {
+      padding: 14px;
+      font-family: var(--font-display);
+      font-weight: 800;
+      font-size: 0.88rem;
+      border-radius: var(--radius-sm);
+      background: transparent;
+      color: var(--text-secondary);
+      text-align: center;
+      transition: all var(--transition-fast);
+    }
+
+    .form-audience-tab[aria-selected="true"][data-target="b2c"] {
+      background: var(--brand-orange);
+      color: #FFFFFF;
+      box-shadow: 0 4px 12px rgba(249, 127, 6, 0.25);
+    }
+
+    .form-audience-tab[aria-selected="true"][data-target="b2b"] {
+      background: var(--brand-blue);
+      color: #FFFFFF;
+      box-shadow: 0 4px 12px rgba(39, 81, 203, 0.25);
+    }
+
+    .form-body {
+      padding: 28px 24px;
+    }
+
+    @media (min-width: 640px) {
+      .form-body { padding: 36px; }
+    }
+
+    .form-progress-bar {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-bottom: 24px;
+      padding-bottom: 14px;
+      border-bottom: 1px solid var(--border-hairline);
+    }
+
+    .form-step-indicator {
+      font-family: var(--font-display);
+      font-size: 0.8rem;
+      font-weight: 800;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      color: var(--text-secondary);
+    }
+
+    .form-step-dots {
+      display: flex;
+      gap: 8px;
+    }
+
+    .step-pill {
+      width: 36px;
+      height: 6px;
+      border-radius: 999px;
+      background: var(--bg-stone-deep);
+      transition: background-color var(--transition-fast);
+    }
+
+    .step-pill.is-active {
+      background: var(--active-accent);
+    }
+
+    .form-step-pane { display: none; }
+    .form-step-pane.is-active { display: block; }
+
+    .field-group { margin-bottom: 22px; }
+
+    .field-label {
+      display: block;
+      font-family: var(--font-display);
+      font-size: 0.92rem;
+      font-weight: 700;
+      color: var(--text-primary);
+      margin-bottom: 10px;
+    }
+
+    .field-required {
+      color: var(--error-color);
+      margin-left: 2px;
+    }
+
+    .field-hint {
+      display: block;
+      font-size: 0.8rem;
+      color: var(--text-muted);
+      margin-top: -4px;
+      margin-bottom: 10px;
+    }
+
+    .options-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 10px;
+    }
+
+    @media (min-width: 540px) {
+      .options-grid--2col { grid-template-columns: repeat(2, 1fr); }
+      .options-grid--3col { grid-template-columns: repeat(3, 1fr); }
+    }
+
+    .option-card-label {
+      position: relative;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      padding: 14px 16px;
+      border: 1.5px solid var(--border-strong);
+      border-radius: var(--radius-sm);
+      background: var(--bg-pure);
+      cursor: pointer;
+      font-size: 0.88rem;
+      font-weight: 600;
+      transition: all var(--transition-fast);
+    }
+
+    .option-card-label:hover {
+      border-color: var(--text-primary);
+      background: var(--bg-stone);
+    }
+
+    .option-card-label input {
+      accent-color: var(--active-accent);
+      width: 17px;
+      height: 17px;
+      flex-shrink: 0;
+    }
+
+    .option-card-label:has(input:checked) {
+      border-color: var(--active-accent);
+      background: var(--active-accent-soft);
+      font-weight: 700;
+    }
+
+    /* Smart Guidance Banner */
+    .smart-guidance-callout {
+      display: none;
+      margin: 14px 0 22px;
+      padding: 16px;
+      background: rgba(64, 178, 37, 0.08);
+      border-left: 4px solid var(--brand-green);
+      border-radius: var(--radius-sm);
+      font-size: 0.85rem;
+      color: var(--text-primary);
+    }
+
+    .smart-guidance-callout.is-visible { display: block; }
+
+    .smart-guidance-callout__title {
+      font-family: var(--font-display);
+      font-weight: 800;
+      color: #1F680E;
+      margin-bottom: 4px;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+
+    .smart-guidance-callout__link {
+      display: inline-block;
+      margin-top: 8px;
+      font-weight: 700;
+      text-decoration: underline;
+      color: var(--text-primary);
+    }
+
+    .form-input, .form-select, .form-textarea {
+      width: 100%;
+      padding: 13px 16px;
+      border: 1.5px solid var(--border-strong);
+      border-radius: var(--radius-sm);
+      background: var(--bg-pure);
+      font-size: 0.94rem;
+      transition: border-color var(--transition-fast), box-shadow var(--transition-fast);
+    }
+
+    .form-input:focus, .form-select:focus, .form-textarea:focus {
+      border-color: var(--active-accent);
+      box-shadow: 0 0 0 3px var(--active-accent-soft);
+      outline: none;
+    }
+
+    .form-input[aria-invalid="true"], .form-select[aria-invalid="true"] {
+      border-color: var(--error-color);
+      background-color: var(--error-bg);
+    }
+
+    .field-error-msg {
+      display: none;
+      font-size: 0.8rem;
+      font-weight: 600;
+      color: var(--error-color);
+      margin-top: 6px;
+    }
+
+    .field-error-msg.is-visible { display: block; }
+
+    .form-row-2col {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 16px;
+    }
+
+    @media (min-width: 600px) {
+      .form-row-2col { grid-template-columns: 1fr 1fr; }
+    }
+
+    .consent-label {
+      display: flex;
+      align-items: flex-start;
+      gap: 10px;
+      font-size: 0.82rem;
+      color: var(--text-secondary);
+      cursor: pointer;
+      line-height: 1.45;
+    }
+
+    .consent-label input {
+      margin-top: 3px;
+      width: 17px;
+      height: 17px;
+      accent-color: var(--active-accent);
+      flex-shrink: 0;
+    }
+
+    .form-actions-bar {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: space-between;
+      gap: 12px;
+      margin-top: 24px;
+      padding-top: 20px;
+      border-top: 1px solid var(--border-hairline);
+    }
+
+    /* Confirmation Panel */
+    .form-confirmation-state {
+      display: none;
+      padding: 32px 28px;
+      background: var(--bg-stone);
+      border-top: 4px solid var(--brand-green);
+    }
+
+    .form-confirmation-state.is-visible { display: block; }
+
+    .confirmation-badge {
+      display: inline-block;
+      padding: 5px 12px;
+      font-size: 0.74rem;
+      font-weight: 800;
+      text-transform: uppercase;
+      background: var(--brand-yellow);
+      color: var(--brand-black);
+      border-radius: 999px;
+      margin-bottom: 12px;
+    }
+
+    .payload-preview-box {
+      margin: 16px 0;
+      padding: 18px;
+      background: var(--bg-pure);
+      border: 1px solid var(--border-hairline);
+      border-radius: var(--radius-sm);
+      font-size: 0.84rem;
+    }
+
+    .payload-preview-box dl {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 8px;
+    }
+
+    @media (min-width: 540px) {
+      .payload-preview-box dl { grid-template-columns: 170px 1fr; }
+    }
+
+    .payload-preview-box dt {
+      font-weight: 700;
+      color: var(--text-secondary);
+    }
+
+    .payload-preview-box dd {
+      font-weight: 600;
+      color: var(--text-primary);
+    }
+
+    /* ==========================================================================
+       10. SECTION 8 — LOCATIONS & FINAL CONVERSION SECTION
+       ========================================================================== */
+    .locations-section {
+      padding: 80px 0;
+      background-color: var(--bg-stone);
+      border-bottom: 1px solid var(--border-hairline);
+    }
+
+    .locations-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 24px;
+      margin-top: 36px;
+    }
+
+    @media (min-width: 768px) {
+      .locations-grid { grid-template-columns: repeat(3, 1fr); }
+    }
+
+    .location-card {
+      background: var(--bg-pure);
+      border: 1px solid var(--border-hairline);
+      border-radius: var(--radius-md);
+      padding: 28px;
+      box-shadow: var(--shadow-architectural);
+    }
+
+    .location-card__city {
+      font-family: var(--font-display);
+      font-size: 1.2rem;
+      font-weight: 800;
+      margin-bottom: 6px;
+    }
+
+    .location-card__role {
+      font-size: 0.72rem;
+      font-weight: 800;
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+      color: var(--active-accent);
+      margin-bottom: 12px;
+    }
+
+    .location-card__address {
+      font-style: normal;
+      font-size: 0.9rem;
+      color: var(--text-secondary);
+      line-height: 1.55;
+    }
+
+    .final-cta-banner {
+      margin-top: 48px;
+      background: var(--bg-dark);
+      color: #FFFFFF;
+      border-radius: var(--radius-lg);
+      padding: 40px 32px;
+      display: flex;
+      flex-direction: column;
+      gap: 24px;
+      align-items: flex-start;
+      justify-content: space-between;
+      box-shadow: var(--shadow-elevated);
+    }
+
+    @media (min-width: 900px) {
+      .final-cta-banner {
+        flex-direction: row;
+        align-items: center;
+        padding: 48px 52px;
+      }
+    }
+
+    /* ==========================================================================
+       11. SECTION 9 — FOOTER
+       ========================================================================== */
+    .site-footer {
+      background: var(--bg-dark);
+      color: var(--text-muted-on-dark);
+      padding: 56px 0 36px;
+      font-size: 0.88rem;
+      border-top: 1px solid var(--border-dark);
+    }
+
+    .footer-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 36px;
+      padding-bottom: 40px;
+      border-bottom: 1px solid var(--border-dark);
+    }
+
+    @media (min-width: 768px) {
+      .footer-grid { grid-template-columns: 1.4fr 1fr 1fr; }
+    }
+
+    .footer-heading {
+      font-family: var(--font-display);
+      font-size: 0.95rem;
+      font-weight: 800;
+      color: #FFFFFF;
+      margin-bottom: 14px;
+    }
+
+    .footer-links {
+      list-style: none;
+      display: grid;
+      gap: 8px;
+    }
+
+    .footer-links a:hover { color: var(--brand-yellow); }
+
+    .footer-bottom {
+      padding-top: 28px;
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: space-between;
+      gap: 16px;
+      font-size: 0.8rem;
+    }
+
+    .privacy-modal-backdrop {
+      display: none;
+      position: fixed;
+      inset: 0;
+      background: rgba(11, 13, 19, 0.72);
+      backdrop-filter: blur(4px);
+      z-index: 2000;
+      align-items: center;
+      justify-content: center;
+      padding: 20px;
+    }
+
+    .privacy-modal-backdrop.is-open { display: flex; }
+
+    .privacy-modal {
+      background: var(--bg-pure);
+      border-radius: var(--radius-md);
+      max-width: 580px;
+      width: 100%;
+      padding: 32px;
+      box-shadow: var(--shadow-elevated);
+    }
+  </style>
+</head>
+
+<body data-audience="b2c">
+  <a href="#main-content" class="skip-link">Aller au contenu principal</a>
+
+  <!-- ========================================================================
+       SECTION 1 — HEADER
+       ======================================================================== -->
+  <header class="site-header">
+    <div class="container header-inner">
+      <a href="https://batitherm.ma/" class="brand-logo-wrap" aria-label="BATITHERM - Accueil">
+        <img 
+          src="assets/batitherm-logo.svg" 
+          alt="Logo officiel BATITHERM" 
+          class="brand-logo-img" 
+          width="168" 
+          height="42"
+          onerror="this.style.display='none'; document.getElementById('logo-slot-placeholder').style.display='inline-flex';"
+        />
+        <span id="logo-slot-placeholder" class="logo-fallback-slot">
+          BATITHERM
+        </span>
+        <span class="brand-heritage-tag">
+          Solutions Thermiques<br />Depuis 1999 au Maroc
+        </span>
+      </a>
+
+      <nav class="main-nav" aria-label="Navigation principale">
+        <a href="#diagnostic-parcours" class="main-nav__link">Votre besoin</a>
+        <a href="#gamme-thermique" class="main-nav__link">Solutions</a>
+        <a href="#pourquoi-batitherm" class="main-nav__link">Expertise</a>
+        <a href="#implantations" class="main-nav__link">Casablanca &amp; Rabat</a>
+      </nav>
+
+      <div class="header-actions">
+        <div class="header-mode-pill" role="group" aria-label="Changer de profil">
+          <button type="button" class="header-mode-btn js-audience-trigger" data-target="b2c" aria-pressed="true">
+            Particulier
+          </button>
+          <button type="button" class="header-mode-btn js-audience-trigger" data-target="b2b" aria-pressed="false">
+            Professionnel
+          </button>
+        </div>
+
+        <a href="#qualification-form" class="btn btn--primary header-cta">
+          <span class="b2c-only">Étudier mon besoin</span>
+          <span class="b2b-only">Parler d'un projet</span>
+        </a>
+
+        <button type="button" class="mobile-menu-toggle" id="mobile-menu-btn" aria-expanded="false" aria-controls="mobile-drawer" aria-label="Ouvrir le menu">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2">
+            <path d="M3 6h18M3 12h18M3 18h18" stroke-linecap="round"/>
+          </svg>
+        </button>
+      </div>
+    </div>
+
+    <div class="mobile-drawer" id="mobile-drawer">
+      <nav class="mobile-drawer__nav" aria-label="Navigation mobile">
+        <a href="#diagnostic-parcours" class="mobile-drawer__link js-mobile-link">Votre besoin</a>
+        <a href="#gamme-thermique" class="mobile-drawer__link js-mobile-link">Solutions</a>
+        <a href="#pourquoi-batitherm" class="mobile-drawer__link js-mobile-link">Expertise</a>
+        <a href="#implantations" class="mobile-drawer__link js-mobile-link">Implantations</a>
+      </nav>
+      <div style="display:grid; grid-template-columns:1fr 1fr; gap:8px;">
+        <button type="button" class="btn btn--secondary js-audience-trigger" data-target="b2c" style="padding:10px; font-size:0.82rem;">Particulier</button>
+        <button type="button" class="btn btn--secondary js-audience-trigger" data-target="b2b" style="padding:10px; font-size:0.82rem;">Professionnel</button>
+      </div>
+    </div>
+  </header>
+
+  <main id="main-content">
+    <!-- ======================================================================
+         SECTION 2 — HERO (CONCISE & PREMIUM)
+         ====================================================================== -->
+    <section class="hero-section">
+      <div class="container hero-grid">
+        <div>
+          <div class="tech-eyebrow">
+            <span class="tech-eyebrow__dot"></span>
+            <span>Plus de 25 ans d'expertise • Fondé en 1999</span>
+          </div>
+
+          <h1 class="hero-title">
+            <span class="b2c-only">
+              L'eau chaude et le chauffage pensés pour <span class="hero-title__highlight">votre confort durable</span>.
+            </span>
+            <span class="b2b-only">
+              Votre partenaire en <span class="hero-title__highlight">équipements thermiques</span> pour projets professionnels.
+            </span>
+          </h1>
+
+          <p class="hero-lead">
+            <span class="b2c-only">
+              Villa ou appartement (avec ou sans accès toiture) : trouvez le système adapté à votre logement avec un suivi après-vente local au Maroc.
+            </span>
+            <span class="b2b-only">
+              Eau chaude sanitaire, stockage grande capacité, chaudières Sime et pompes à chaleur : nous accompagnons promoteurs, hôtels, BET et installateurs.
+            </span>
+          </p>
+
+          <!-- Explicit Profile Selector -->
+          <div class="audience-selector-box" role="region" aria-label="Sélection de votre profil">
+            <div class="audience-selector-label">
+              Sélectionnez votre profil :
+            </div>
+
+            <div class="audience-cards-grid">
+              <button 
+                type="button" 
+                class="audience-card-btn js-audience-trigger" 
+                data-target="b2c" 
+                aria-pressed="true"
+              >
+                <div class="audience-card-btn__top">
+                  <span class="audience-card-btn__title">Particulier</span>
+                  <span class="audience-card-btn__indicator" aria-hidden="true"></span>
+                </div>
+                <span class="audience-card-btn__desc">
+                  Villa, appartement, chauffage ou piscine.
+                </span>
+              </button>
+
+              <button 
+                type="button" 
+                class="audience-card-btn js-audience-trigger" 
+                data-target="b2b" 
+                aria-pressed="false"
+              >
+                <div class="audience-card-btn__top">
+                  <span class="audience-card-btn__title">Professionnel</span>
+                  <span class="audience-card-btn__indicator" aria-hidden="true"></span>
+                </div>
+                <span class="audience-card-btn__desc">
+                  Promotion, hôtellerie, BET, chantier ou revendeur.
+                </span>
+              </button>
+            </div>
+          </div>
+
+          <div class="hero-cta-row">
+            <a href="#qualification-form" class="btn btn--primary">
+              <span class="b2c-only">Étudier mon besoin</span>
+              <span class="b2b-only">Demander une étude ou cotation</span>
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4">
+                <path d="M5 12h14M13 5l7 7-7 7" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+            </a>
+            <a href="#gamme-thermique" class="btn btn--secondary">
+              Découvrir la gamme
+            </a>
+          </div>
+        </div>
+
+        <!-- Architectural Visual Frame -->
+        <div class="hero-visual-frame">
+          <div class="hero-visual-header">
+            <span>CONFORT THERMIQUE — MAROC</span>
+            <span class="hero-visual-header__status">
+              <span class="b2c-only">● HABITAT (B2C)</span>
+              <span class="b2b-only">● PROJETS (B2B)</span>
+            </span>
+          </div>
+
+          <div class="media-slot">
+            <img 
+              src="assets/thermal-installation.webp" 
+              alt="Installation thermique Batitherm au Maroc" 
+              class="media-slot__real-img" 
+              width="640" 
+              height="480"
+              onerror="this.style.display='none';"
+            />
+            <div class="media-slot__blueprint-overlay">
+              <div class="blueprint-diagram">
+                <div class="blueprint-diagram__title">
+                  <span class="b2c-only">Solutions Résidentielles</span>
+                  <span class="b2b-only">Solutions Collectives &amp; Tertiaires</span>
+                </div>
+                <ul class="blueprint-diagram__list b2c-only">
+                  <li><span>Eau Chaude</span> <strong>Solaire / Thermodynamique</strong></li>
+                  <li><span>Appartement sans toit</span> <strong>Thermodynamique / Électrique</strong></li>
+                  <li><span>Chauffage &amp; Piscine</span> <strong>PAC &amp; Chaudières Sime</strong></li>
+                  <li><span>Réseau national</span> <strong>Casablanca, Rabat &amp; +44 revendeurs</strong></li>
+                </ul>
+                <ul class="blueprint-diagram__list b2b-only">
+                  <li><span>Stockage ECS</span> <strong>Ballons grande capacité &amp; Préparateurs</strong></li>
+                  <li><span>Chaufferie</span> <strong>Chaudières Sime &amp; Pompes à chaleur</strong></li>
+                  <li><span>Solaire Collectif</span> <strong>Capteurs solaires thermiques</strong></li>
+                  <li><span>Références</span> <strong>Addoha • Bank Al-Maghrib • Akwa Group</strong></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+          <div class="hero-visual-footer">
+            <span style="font-size:0.8rem; font-weight:600; color:var(--text-muted);">
+              Engagement Batitherm :
+            </span>
+            <p class="arabic-motto" lang="ar">
+              « من الراحة إلى الأمان، باتيتيرم توفر كل ما يلزمكم »
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ======================================================================
+         SECTION 3 — TRUST & VERIFIED CREDENTIALS
+         ====================================================================== -->
+    <section class="trust-section" aria-label="Repères et références Batitherm">
+      <div class="container">
+        <div class="trust-metrics-grid">
+          <div class="trust-metric-card">
+            <div class="trust-metric__number">+25 ans</div>
+            <div class="trust-metric__label">D'expertise thermique au Maroc (depuis 1999)</div>
+          </div>
+          <div class="trust-metric-card">
+            <div class="trust-metric__number">+5 800</div>
+            <div class="trust-metric__label">Clients accompagnés à travers le Royaume</div>
+          </div>
+          <div class="trust-metric-card">
+            <div class="trust-metric__number">+44</div>
+            <div class="trust-metric__label">Revendeurs partenaires + Casablanca &amp; Rabat</div>
+          </div>
+          <div class="trust-metric-card">
+            <div class="trust-metric__number">9 Gammes</div>
+            <div class="trust-metric__label">Eau chaude sanitaire, chauffage &amp; piscine</div>
+          </div>
+        </div>
+
+        <div class="trust-references-row">
+          <div class="trust-ref-group">
+            <span class="trust-ref-group__title">Références :</span>
+            <span class="ref-pill">Addoha</span>
+            <span class="ref-pill">Bank Al-Maghrib</span>
+            <span class="ref-pill">Akwa Group</span>
+          </div>
+
+          <div class="trust-ref-group">
+            <span class="trust-ref-group__title">Grandes enseignes :</span>
+            <span class="ref-pill ref-pill--retail">Marjane</span>
+            <span class="ref-pill ref-pill--retail">Bricoma</span>
+            <span class="ref-pill">Showrooms &amp; Réseau Pro</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ======================================================================
+         SECTION 4 — AUDIENCE-SPECIFIC EXPERIENCES (LIGHTER COPY)
+         ====================================================================== -->
+    <section class="experience-section" id="diagnostic-parcours">
+      <div class="container">
+        <!-- B2C EXPERIENCE -->
+        <div class="b2c-only">
+          <div class="experience-header">
+            <div class="tech-eyebrow">
+              <span class="tech-eyebrow__dot"></span>
+              <span>PARCOURS PARTICULIERS</span>
+            </div>
+            <h2 class="section-title">Quelle est la configuration de votre logement ?</h2>
+            <p class="section-subtitle">
+              Sélectionnez votre situation pour découvrir l'orientation recommandée par nos spécialistes :
+            </p>
+          </div>
+
+          <div class="diagnostic-cards-grid">
+            <article class="diagnostic-card diagnostic-card--highlight">
+              <div>
+                <span class="diagnostic-card__tag tag--green">Appartement • Sans accès toiture</span>
+                <h3 class="diagnostic-card__title">Appartement sans accès au toit</h3>
+                <p class="diagnostic-card__problem">
+                  Vous souhaitez réduire votre facture d'eau chaude sans pouvoir installer de panneaux sur le toit collectif.
+                </p>
+                <div class="diagnostic-card__solution-box">
+                  <strong>Solution :</strong> Le <strong>chauffe-eau thermodynamique</strong> (installé en buanderie ou balcon technique) ou un <strong>chauffe-eau électrique</strong> bien dimensionné.
+                </div>
+              </div>
+              <button type="button" class="diagnostic-card__action js-preset-action" data-audience="b2c" data-property="Appartement sans accès toiture" data-need="Eau chaude sanitaire" data-spotlight="thermodynamique">
+                <span>Choisir cette configuration</span>
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M13 5l7 7-7 7"/></svg>
+              </button>
+            </article>
+
+            <article class="diagnostic-card">
+              <div>
+                <span class="diagnostic-card__tag tag--orange">Villa ou Terrasse accessible</span>
+                <h3 class="diagnostic-card__title">Villa ou appartement avec terrasse</h3>
+                <p class="diagnostic-card__problem">
+                  Plusieurs salles de bain sollicitées et une toiture dégagée permettant de capter l'ensoleillement.
+                </p>
+                <div class="diagnostic-card__solution-box">
+                  <strong>Solution :</strong> <strong>Capteurs solaires thermiques</strong> avec ballon de stockage ou <strong>chauffe-eau thermodynamique</strong> familial.
+                </div>
+              </div>
+              <button type="button" class="diagnostic-card__action js-preset-action" data-audience="b2c" data-property="Villa" data-need="Eau chaude sanitaire" data-spotlight="solaire-thermique">
+                <span>Étudier pour villa ou terrasse</span>
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M13 5l7 7-7 7"/></svg>
+              </button>
+            </article>
+
+            <article class="diagnostic-card">
+              <div>
+                <span class="diagnostic-card__tag tag--orange">Confort d'hiver</span>
+                <h3 class="diagnostic-card__title">Chauffage central &amp; salles de bain</h3>
+                <p class="diagnostic-card__problem">
+                  Pour un confort thermique homogène et maîtrisé dans toute la maison durant l'hiver.
+                </p>
+                <div class="diagnostic-card__solution-box">
+                  <strong>Solution :</strong> <strong>Pompes à chaleur</strong>, <strong>chaudières Sime</strong> et <strong>radiateurs sèche-serviettes</strong>.
+                </div>
+              </div>
+              <button type="button" class="diagnostic-card__action js-preset-action" data-audience="b2c" data-property="Villa" data-need="Chauffage du logement" data-spotlight="chaudieres-sime">
+                <span>Étudier le chauffage domestique</span>
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M13 5l7 7-7 7"/></svg>
+              </button>
+            </article>
+
+            <article class="diagnostic-card">
+              <div>
+                <span class="diagnostic-card__tag tag--orange">Baignade prolongée</span>
+                <h3 class="diagnostic-card__title">Chauffage de piscine</h3>
+                <p class="diagnostic-card__problem">
+                  Profitez de votre bassin au printemps et à l'automne grâce à une eau maintenue à bonne température.
+                </p>
+                <div class="diagnostic-card__solution-box">
+                  <strong>Solution :</strong> <strong>Pompes à chaleur dédiées aux piscines</strong> dimensionnées selon le volume de votre bassin.
+                </div>
+              </div>
+              <button type="button" class="diagnostic-card__action js-preset-action" data-audience="b2c" data-property="Villa" data-need="Chauffage de piscine" data-spotlight="chauffage-piscine">
+                <span>Qualifier mon besoin piscine</span>
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M13 5l7 7-7 7"/></svg>
+              </button>
+            </article>
+          </div>
+        </div>
+
+        <!-- B2B EXPERIENCE -->
+        <div class="b2b-only">
+          <div class="experience-header">
+            <div class="tech-eyebrow">
+              <span class="tech-eyebrow__dot"></span>
+              <span>PARCOURS PROFESSIONNELS</span>
+            </div>
+            <h2 class="section-title">Un partenaire structuré pour vos lots thermiques</h2>
+            <p class="section-subtitle">
+              Dimensionnement, disponibilité en volume et suivi après-vente local pour vos chantiers :
+            </p>
+          </div>
+
+          <div class="diagnostic-cards-grid">
+            <article class="diagnostic-card diagnostic-card--highlight">
+              <div>
+                <span class="diagnostic-card__tag tag--blue">Promotion Immobilière</span>
+                <h3 class="diagnostic-card__title">Programmes d'appartements &amp; villas</h3>
+                <p class="diagnostic-card__problem">
+                  Équipez vos lots résidentiels en respectant le cahier des charges et le planning de livraison.
+                </p>
+                <div class="diagnostic-card__solution-box">
+                  <strong>Offre Pro :</strong> Capteurs solaires thermiques, chauffe-eaux thermodynamiques ou électriques et chaudières Sime.
+                </div>
+              </div>
+              <button type="button" class="diagnostic-card__action js-preset-action" data-audience="b2b" data-project="Promotion immobilière" data-b2bneed="Production d'eau chaude sanitaire (ECS)">
+                <span>Soumettre un programme immobilier</span>
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M13 5l7 7-7 7"/></svg>
+              </button>
+            </article>
+
+            <article class="diagnostic-card">
+              <div>
+                <span class="diagnostic-card__tag tag--blue">Hôtellerie &amp; Cliniques</span>
+                <h3 class="diagnostic-card__title">Production d'ECS à forte sollicitation</h3>
+                <p class="diagnostic-card__problem">
+                  Assurez une continuité de service irréprochable lors des pointes de consommation sanitaire.
+                </p>
+                <div class="diagnostic-card__solution-box">
+                  <strong>Offre Pro :</strong> <strong>Ballons de stockage grande capacité</strong>, préparateurs ECS, PAC et chaudières Sime.
+                </div>
+              </div>
+              <button type="button" class="diagnostic-card__action js-preset-action" data-audience="b2b" data-project="Hôtel / Établissement touristique" data-b2bneed="Ballons de stockage grande capacité & préparateurs">
+                <span>Demander une étude hôtellerie / tertiaire</span>
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M13 5l7 7-7 7"/></svg>
+              </button>
+            </article>
+
+            <article class="diagnostic-card">
+              <div>
+                <span class="diagnostic-card__tag tag--blue">Architectes &amp; BET</span>
+                <h3 class="diagnostic-card__title">Prescription &amp; validation technique</h3>
+                <p class="diagnostic-card__problem">
+                  Validez l'encombrement et la sélection thermique dès la phase d'étude ou d'appel d'offres.
+                </p>
+                <div class="diagnostic-card__solution-box">
+                  <strong>Offre Pro :</strong> Accompagnement direct par nos équipes techniques à Casablanca et Rabat.
+                </div>
+              </div>
+              <button type="button" class="diagnostic-card__action js-preset-action" data-audience="b2b" data-project="Projet institutionnel / Tertiaire" data-b2bneed="Plusieurs lots thermiques combinés">
+                <span>Contacter le pôle prescription</span>
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M13 5l7 7-7 7"/></svg>
+              </button>
+            </article>
+
+            <article class="diagnostic-card">
+              <div>
+                <span class="diagnostic-card__tag tag--blue">Installateurs &amp; Revendeurs</span>
+                <h3 class="diagnostic-card__title">Approvisionnement &amp; distribution</h3>
+                <p class="diagnostic-card__problem">
+                  Appuyez-vous sur un fournisseur établi disposant de stock et de pièces de suivi au Maroc.
+                </p>
+                <div class="diagnostic-card__solution-box">
+                  <strong>Offre Pro :</strong> Rejoignez un réseau national de plus de 44 revendeurs partenaires.
+                </div>
+              </div>
+              <button type="button" class="diagnostic-card__action js-preset-action" data-audience="b2b" data-project="Revendeur / Installateur professionnel" data-b2bneed="Plusieurs lots thermiques combinés">
+                <span>Ouvrir un échange commercial</span>
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M13 5l7 7-7 7"/></svg>
+              </button>
+            </article>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ======================================================================
+         SECTION 5 — SOLUTION DISCOVERY (9 IN-SCOPE THERMAL CATEGORIES)
+         ====================================================================== -->
+    <section class="solutions-section" id="gamme-thermique">
+      <div class="container">
+        <div class="tech-eyebrow">
+          <span class="tech-eyebrow__dot"></span>
+          <span>GAMME THERMIQUE BATITHERM</span>
+        </div>
+        <h2 class="section-title">Nos 9 familles d'équipements</h2>
+        <p class="section-subtitle">
+          Sélectionnez une famille pour pré-remplir votre demande d'étude :
+        </p>
+
+        <div class="solutions-toolbar">
+          <div class="filter-tabs" role="tablist" aria-label="Filtrer les solutions thermiques">
+            <button type="button" class="filter-tab-btn" role="tab" aria-selected="true" data-filter="all">
+              Tout voir (9)
+            </button>
+            <button type="button" class="filter-tab-btn" role="tab" aria-selected="false" data-filter="ecs">
+              Eau Chaude Sanitaire (5)
+            </button>
+            <button type="button" class="filter-tab-btn" role="tab" aria-selected="false" data-filter="chauffage">
+              Chauffage &amp; Piscine (4)
+            </button>
+          </div>
+
+          <div class="scope-notice">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <circle cx="12" cy="12" r="10"/><path d="M12 16v-4M12 8h.01"/>
+            </svg>
+            <span>Spécialiste 100 % thermique</span>
+          </div>
+        </div>
+
+        <div class="solutions-grid" id="solutions-grid">
+          <!-- 1. Chauffe-eaux thermodynamiques -->
+          <article class="solution-card" data-category="ecs" id="card-thermodynamique">
+            <div class="solution-card__media">
+              <img src="assets/chauffe-eau-thermodynamique.webp" alt="Chauffe-eau thermodynamique Batitherm" class="solution-card__img" loading="lazy" width="400" height="250" onerror="this.style.display='none';" />
+              <div class="solution-card__media-top">
+                <span class="solution-category-badge solution-category-badge--renewable">Eau Chaude • Air Ambiant</span>
+              </div>
+              <div class="solution-card__schematic" aria-hidden="true">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg>
+              </div>
+            </div>
+            <div class="solution-card__body">
+              <h3 class="solution-card__title">Chauffe-eaux thermodynamiques</h3>
+              <p class="solution-card__summary">
+                Pompe à chaleur intégrée captant les calories de l'air ambiant. Idéal pour les appartements sans accès toiture et les villas.
+              </p>
+              <button type="button" class="solution-details-toggle js-accordion-btn" aria-expanded="false">
+                <span>Points clés</span>
+                <span>+</span>
+              </button>
+              <div class="solution-details-panel">
+                <ul>
+                  <li><strong>Usage :</strong> Appartement (buanderie, balcon technique), villa.</li>
+                  <li><strong>Atout :</strong> Aucun capteur en toiture requis.</li>
+                </ul>
+              </div>
+              <button type="button" class="solution-select-btn js-select-solution" data-solution="Chauffe-eau thermodynamique" data-need-b2c="Eau chaude sanitaire" data-need-b2b="Production d'eau chaude sanitaire (ECS)">
+                Choisir pour mon étude
+              </button>
+            </div>
+          </article>
+
+          <!-- 2. Capteurs solaires thermiques -->
+          <article class="solution-card" data-category="ecs" id="card-solaire-thermique">
+            <div class="solution-card__media">
+              <img src="assets/capteurs-solaires-thermiques.webp" alt="Capteurs solaires thermiques Batitherm" class="solution-card__img" loading="lazy" width="400" height="250" onerror="this.style.display='none';" />
+              <div class="solution-card__media-top">
+                <span class="solution-category-badge solution-category-badge--renewable">Solaire Thermique • ECS</span>
+              </div>
+              <div class="solution-card__schematic" aria-hidden="true">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="5"/><path d="M12 1v2M12 21v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M1 12h2M21 12h2"/></svg>
+              </div>
+            </div>
+            <div class="solution-card__body">
+              <h3 class="solution-card__title">Capteurs solaires thermiques</h3>
+              <p class="solution-card__summary">
+                Exploite directement l'ensoleillement marocain pour chauffer votre eau sanitaire en maison individuelle ou en collectif.
+              </p>
+              <button type="button" class="solution-details-toggle js-accordion-btn" aria-expanded="false">
+                <span>Points clés</span>
+                <span>+</span>
+              </button>
+              <div class="solution-details-panel">
+                <ul>
+                  <li><strong>Usage :</strong> Villas, immeubles et hôtels avec terrasse dégagée.</li>
+                  <li><strong>Atout :</strong> Valorisation directe de l'énergie solaire.</li>
+                </ul>
+              </div>
+              <button type="button" class="solution-select-btn js-select-solution" data-solution="Capteurs solaires thermiques" data-need-b2c="Eau chaude sanitaire" data-need-b2b="Production d'eau chaude sanitaire (ECS)">
+                Choisir pour mon étude
+              </button>
+            </div>
+          </article>
+
+          <!-- 3. Ballons de stockage (dont grande capacité) -->
+          <article class="solution-card" data-category="ecs" id="card-ballons-stockage">
+            <div class="solution-card__media">
+              <img src="assets/ballons-stockage.webp" alt="Ballons de stockage thermique grande capacité Batitherm" class="solution-card__img" loading="lazy" width="400" height="250" onerror="this.style.display='none';" />
+              <div class="solution-card__media-top">
+                <span class="solution-category-badge solution-category-badge--b2b">Stockage &amp; Grande Capacité</span>
+              </div>
+              <div class="solution-card__schematic" aria-hidden="true">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="6" y="2" width="12" height="20" rx="4"/><path d="M9 6h6M9 18h6"/></svg>
+              </div>
+            </div>
+            <div class="solution-card__body">
+              <h3 class="solution-card__title">Ballons de stockage (grande capacité)</h3>
+              <p class="solution-card__summary">
+                Accumulation d'eau chaude haute performance, disponible jusqu'aux grandes capacités pour l'hôtellerie et le tertiaire.
+              </p>
+              <button type="button" class="solution-details-toggle js-accordion-btn" aria-expanded="false">
+                <span>Points clés</span>
+                <span>+</span>
+              </button>
+              <div class="solution-details-panel">
+                <ul>
+                  <li><strong>Usage :</strong> Hôtels, cliniques, salles de sport et grandes résidences.</li>
+                  <li><strong>Atout :</strong> Isolation renforcée et gestion des pointes.</li>
+                </ul>
+              </div>
+              <button type="button" class="solution-select-btn js-select-solution" data-solution="Ballons de stockage (grande capacité)" data-need-b2c="Eau chaude sanitaire" data-need-b2b="Ballons de stockage grande capacité & préparateurs">
+                Choisir pour mon étude
+              </button>
+            </div>
+          </article>
+
+          <!-- 4. Préparateurs d'eau chaude -->
+          <article class="solution-card" data-category="ecs">
+            <div class="solution-card__media">
+              <img src="assets/preparateurs-eau-chaude.webp" alt="Préparateurs d'eau chaude sanitaire Batitherm" class="solution-card__img" loading="lazy" width="400" height="250" onerror="this.style.display='none';" />
+              <div class="solution-card__media-top">
+                <span class="solution-category-badge solution-category-badge--b2b">Échange Thermique • ECS</span>
+              </div>
+              <div class="solution-card__schematic" aria-hidden="true">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 10h16M4 14h16M7 4v16M17 4v16"/></svg>
+              </div>
+            </div>
+            <div class="solution-card__body">
+              <h3 class="solution-card__title">Préparateurs d'eau chaude</h3>
+              <p class="solution-card__summary">
+                Production d'eau chaude sanitaire couplée à une chaudière, une pompe à chaleur ou un réseau solaire thermique.
+              </p>
+              <button type="button" class="solution-details-toggle js-accordion-btn" aria-expanded="false">
+                <span>Points clés</span>
+                <span>+</span>
+              </button>
+              <div class="solution-details-panel">
+                <ul>
+                  <li><strong>Usage :</strong> Chaufferies de villas, immeubles et bâtiments tertiaires.</li>
+                  <li><strong>Atout :</strong> Disponibilité rapide et débit régulier.</li>
+                </ul>
+              </div>
+              <button type="button" class="solution-select-btn js-select-solution" data-solution="Préparateurs d'eau chaude" data-need-b2c="Eau chaude sanitaire" data-need-b2b="Ballons de stockage grande capacité & préparateurs">
+                Choisir pour mon étude
+              </button>
+            </div>
+          </article>
+
+          <!-- 5. Chauffe-eaux électriques -->
+          <article class="solution-card" data-category="ecs">
+            <div class="solution-card__media">
+              <img src="assets/chauffe-eau-electrique.webp" alt="Chauffe-eaux électriques Batitherm" class="solution-card__img" loading="lazy" width="400" height="250" onerror="this.style.display='none';" />
+              <div class="solution-card__media-top">
+                <span class="solution-category-badge">Eau Chaude • Résidentiel &amp; Lots</span>
+              </div>
+              <div class="solution-card__schematic" aria-hidden="true">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/></svg>
+              </div>
+            </div>
+            <div class="solution-card__body">
+              <h3 class="solution-card__title">Chauffe-eaux électriques</h3>
+              <p class="solution-card__summary">
+                Solution compacte et fiable pour les appartements, studios et lots de promotion immobilière.
+              </p>
+              <button type="button" class="solution-details-toggle js-accordion-btn" aria-expanded="false">
+                <span>Points clés</span>
+                <span>+</span>
+              </button>
+              <div class="solution-details-panel">
+                <ul>
+                  <li><strong>Usage :</strong> Espaces techniques réduits, programmes résidentiels.</li>
+                  <li><strong>Atout :</strong> Pose simple et entretien réduit.</li>
+                </ul>
+              </div>
+              <button type="button" class="solution-select-btn js-select-solution" data-solution="Chauffe-eau électrique" data-need-b2c="Eau chaude sanitaire" data-need-b2b="Production d'eau chaude sanitaire (ECS)">
+                Choisir pour mon étude
+              </button>
+            </div>
+          </article>
+
+          <!-- 6. Pompes à chaleur (Chauffage) -->
+          <article class="solution-card" data-category="chauffage">
+            <div class="solution-card__media">
+              <img src="assets/pompes-a-chaleur.webp" alt="Pompes à chaleur Batitherm" class="solution-card__img" loading="lazy" width="400" height="250" onerror="this.style.display='none';" />
+              <div class="solution-card__media-top">
+                <span class="solution-category-badge solution-category-badge--heating">Chauffage • Haute Efficacité</span>
+              </div>
+              <div class="solution-card__schematic" aria-hidden="true">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="9"/><path d="M12 8v8M8 12h8"/></svg>
+              </div>
+            </div>
+            <div class="solution-card__body">
+              <h3 class="solution-card__title">Pompes à chaleur (Chauffage)</h3>
+              <p class="solution-card__summary">
+                Chauffage central haute efficacité pour villas et bâtiments professionnels (plancher chauffant, ventilo-convecteurs).
+              </p>
+              <button type="button" class="solution-details-toggle js-accordion-btn" aria-expanded="false">
+                <span>Points clés</span>
+                <span>+</span>
+              </button>
+              <div class="solution-details-panel">
+                <ul>
+                  <li><strong>Usage :</strong> Villas neuves ou rénovées, hôtels et tertiaire.</li>
+                  <li><strong>Atout :</strong> Confort thermique homogène et maîtrise énergétique.</li>
+                </ul>
+              </div>
+              <button type="button" class="solution-select-btn js-select-solution" data-solution="Pompe à chaleur (Chauffage)" data-need-b2c="Chauffage du logement" data-need-b2b="Pompes à chaleur (Chauffage / Piscine)">
+                Choisir pour mon étude
+              </button>
+            </div>
+          </article>
+
+          <!-- 7. Solutions de chauffage pour piscines -->
+          <article class="solution-card" data-category="chauffage" id="card-chauffage-piscine">
+            <div class="solution-card__media">
+              <img src="assets/chauffage-piscine.webp" alt="Solutions de chauffage pour piscines Batitherm" class="solution-card__img" loading="lazy" width="400" height="250" onerror="this.style.display='none';" />
+              <div class="solution-card__media-top">
+                <span class="solution-category-badge solution-category-badge--heating">Piscines Privées &amp; Hôtels</span>
+              </div>
+              <div class="solution-card__schematic" aria-hidden="true">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M2 15c1.67-1.33 3.33-1.33 5 0 1.67 1.33 3.33 1.33 5 0 1.67-1.33 3.33-1.33 5 0 1.67 1.33 3.33 1.33 5 0M2 19c1.67-1.33 3.33-1.33 5 0 1.67 1.33 3.33 1.33 5 0 1.67-1.33 3.33-1.33 5 0 1.67 1.33 3.33 1.33 5 0"/></svg>
+              </div>
+            </div>
+            <div class="solution-card__body">
+              <h3 class="solution-card__title">Chauffage pour piscines</h3>
+              <p class="solution-card__summary">
+                Pompes à chaleur dédiées aux bassins résidentiels et hôteliers pour prolonger la saison de baignade.
+              </p>
+              <button type="button" class="solution-details-toggle js-accordion-btn" aria-expanded="false">
+                <span>Points clés</span>
+                <span>+</span>
+              </button>
+              <div class="solution-details-panel">
+                <ul>
+                  <li><strong>Usage :</strong> Piscines de villas, riads, hôtels et clubs.</li>
+                  <li><strong>Dimensionnement :</strong> Selon le volume ($m^3$) et l'exposition.</li>
+                </ul>
+              </div>
+              <button type="button" class="solution-select-btn js-select-solution" data-solution="Solution de chauffage pour piscine" data-need-b2c="Chauffage de piscine" data-need-b2b="Pompes à chaleur (Chauffage / Piscine)">
+                Choisir pour mon étude
+              </button>
+            </div>
+          </article>
+
+          <!-- 8. Chaudières (dont la marque italienne Sime) -->
+          <article class="solution-card" data-category="chauffage" id="card-chaudieres-sime">
+            <div class="solution-card__media">
+              <img src="assets/chaudieres-sime.webp" alt="Chaudières Sime distribuées par Batitherm" class="solution-card__img" loading="lazy" width="400" height="250" onerror="this.style.display='none';" />
+              <div class="solution-card__media-top">
+                <span class="solution-category-badge solution-category-badge--heating">Chaudières • Gamme Sime</span>
+              </div>
+              <div class="solution-card__schematic" aria-hidden="true">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="4" y="2" width="16" height="20" rx="2"/><circle cx="12" cy="14" r="3"/></svg>
+              </div>
+            </div>
+            <div class="solution-card__body">
+              <h3 class="solution-card__title">Chaudières (dont la marque Sime)</h3>
+              <p class="solution-card__summary">
+                Chauffage central et production d'eau chaude sanitaire avec notamment la marque italienne Sime.
+              </p>
+              <button type="button" class="solution-details-toggle js-accordion-btn" aria-expanded="false">
+                <span>Points clés</span>
+                <span>+</span>
+              </button>
+              <div class="solution-details-panel">
+                <ul>
+                  <li><strong>Usage :</strong> Radiateurs, plancher chauffant et chaufferies centrales.</li>
+                  <li><strong>Atout :</strong> Fiabilité reconnue en résidentiel et collectif.</li>
+                </ul>
+              </div>
+              <button type="button" class="solution-select-btn js-select-solution" data-solution="Chaudières (gamme Sime)" data-need-b2c="Chauffage du logement" data-need-b2b="Chauffage central & Chaudières (Sime)">
+                Choisir pour mon étude
+              </button>
+            </div>
+          </article>
+
+          <!-- 9. Radiateurs sèche-serviettes -->
+          <article class="solution-card" data-category="chauffage">
+            <div class="solution-card__media">
+              <img src="assets/radiateurs-seche-serviettes.webp" alt="Radiateurs sèche-serviettes Batitherm" class="solution-card__img" loading="lazy" width="400" height="250" onerror="this.style.display='none';" />
+              <div class="solution-card__media-top">
+                <span class="solution-category-badge solution-category-badge--heating">Confort Salles de Bain</span>
+              </div>
+              <div class="solution-card__schematic" aria-hidden="true">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 3v18M17 3v18M7 7h10M7 12h10M7 17h10"/></svg>
+              </div>
+            </div>
+            <div class="solution-card__body">
+              <h3 class="solution-card__title">Radiateurs sèche-serviettes</h3>
+              <p class="solution-card__summary">
+                Confort thermique et design pour les salles de bain résidentielles et hôtelières.
+              </p>
+              <button type="button" class="solution-details-toggle js-accordion-btn" aria-expanded="false">
+                <span>Points clés</span>
+                <span>+</span>
+              </button>
+              <div class="solution-details-panel">
+                <ul>
+                  <li><strong>Usage :</strong> Salles d'eau villas, appartements et hôtels.</li>
+                  <li><strong>Intégration :</strong> Électrique ou sur chauffage central.</li>
+                </ul>
+              </div>
+              <button type="button" class="solution-select-btn js-select-solution" data-solution="Radiateurs sèche-serviettes" data-need-b2c="Chauffage du logement" data-need-b2b="Chauffage central & Chaudières (Sime)">
+                Choisir pour mon étude
+              </button>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ======================================================================
+         SECTION 6 — WHY BATITHERM (CONCISE 4 PILLARS)
+         ====================================================================== -->
+    <section class="why-section" id="pourquoi-batitherm">
+      <div class="container">
+        <div class="tech-eyebrow">
+          <span class="tech-eyebrow__dot"></span>
+          <span>ENGAGEMENT DEPUIS 1999</span>
+        </div>
+        <h2 class="section-title">Pourquoi choisir Batitherm ?</h2>
+        <p class="section-subtitle">
+          L'alliance d'équipements durables, d'un conseil objectif et d'une présence locale au Maroc.
+        </p>
+
+        <div class="pillars-grid">
+          <div class="pillar-item">
+            <div class="pillar-item__num">01 — CONSEIL SUR MESURE</div>
+            <h3 class="pillar-item__title">Adapté à votre bâtiment</h3>
+            <p class="pillar-item__desc">
+              Chaque recommandation tient compte de vos contraintes réelles (accès toiture, nombre de salles d'eau ou cahier des charges chantier).
+            </p>
+          </div>
+
+          <div class="pillar-item">
+            <div class="pillar-item__num">02 — OFFRE COMPLÈTE</div>
+            <h3 class="pillar-item__title">9 familles thermiques</h3>
+            <p class="pillar-item__desc">
+              Solaire thermique, thermodynamique, électrique, ballons grande capacité, PAC et chaudières Sime sous un même toit.
+            </p>
+          </div>
+
+          <div class="pillar-item">
+            <div class="pillar-item__num">03 — PRÉSENCE MAROCAINE</div>
+            <h3 class="pillar-item__title">Casablanca, Rabat &amp; Réseau</h3>
+            <p class="pillar-item__desc">
+              Deux implantations propres, plus de 44 revendeurs partenaires et une présence chez Marjane et Bricoma.
+            </p>
+          </div>
+
+          <div class="pillar-item">
+            <div class="pillar-item__num">04 — SUIVI APRÈS-VENTE</div>
+            <h3 class="pillar-item__title">Continuité &amp; fiabilité</h3>
+            <p class="pillar-item__desc">
+              Plus de 5 800 clients satisfaits et des références majeures (Addoha, Bank Al-Maghrib, Akwa Group).
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ======================================================================
+         SECTION 7 — PROGRESSIVE LEAD QUALIFICATION FORM (UNTOUCHED STRUCTURE)
+         ====================================================================== -->
+    <section class="qualification-section" id="qualification-form">
+      <div class="container qual-layout">
+        <!-- Left Column: Concise Context -->
+        <div>
+          <div class="tech-eyebrow">
+            <span class="tech-eyebrow__dot"></span>
+            <span>ÉTUDE &amp; CONTACT</span>
+          </div>
+          <h2 class="section-title">
+            <span class="b2c-only">Étudions votre besoin thermique</span>
+            <span class="b2b-only">Présentez votre projet professionnel</span>
+          </h2>
+          <p class="section-subtitle" style="margin-bottom: 24px;">
+            <span class="b2c-only">En moins d'une minute, indiquez votre configuration pour être orienté vers la solution adaptée.</span>
+            <span class="b2b-only">Transmettez les premiers éléments de votre projet pour être recontacté par notre équipe B2B.</span>
+          </p>
+
+          <div class="qual-sidebar">
+            <h3 style="font-family:var(--font-display); font-size:1rem; font-weight:800;">
+              Comment se déroule la suite ?
+            </h3>
+            <ol class="process-steps-list">
+              <li class="process-step-li">
+                <span class="process-step-li__num">1</span>
+                <div>
+                  <div class="process-step-li__title">Analyse de votre demande</div>
+                  <p class="process-step-li__desc">Étude de votre configuration résidentielle ou de votre lot chantier.</p>
+                </div>
+              </li>
+              <li class="process-step-li">
+                <span class="process-step-li__num">2</span>
+                <div>
+                  <div class="process-step-li__title">Échange téléphonique ou WhatsApp</div>
+                  <p class="process-step-li__desc">Un conseiller Batitherm valide les détails techniques avec vous.</p>
+                </div>
+              </li>
+              <li class="process-step-li">
+                <span class="process-step-li__num">3</span>
+                <div>
+                  <div class="process-step-li__title">Proposition adaptée</div>
+                  <p class="process-step-li__desc">Orientation claire vers l'équipement correspondant à votre besoin.</p>
+                </div>
+              </li>
+            </ol>
+          </div>
+        </div>
+
+        <!-- Right Column: Interactive Progressive Form -->
+        <div class="form-card">
+          <div class="form-card__top-tabs" role="tablist" aria-label="Choisir le formulaire selon votre profil">
+            <button 
+              type="button" 
+              class="form-audience-tab js-audience-trigger" 
+              role="tab" 
+              data-target="b2c" 
+              aria-selected="true"
+            >
+              Parcours Particulier (B2C)
+            </button>
+            <button 
+              type="button" 
+              class="form-audience-tab js-audience-trigger" 
+              role="tab" 
+              data-target="b2b" 
+              aria-selected="false"
+            >
+              Parcours Professionnel (B2B)
+            </button>
+          </div>
+
+          <form id="batitherm-lead-form" class="form-body" novalidate>
+            <div class="form-progress-bar">
+              <span class="form-step-indicator" id="form-step-label">Étape 1 sur 2 — Qualification du besoin</span>
+              <div class="form-step-dots" aria-hidden="true">
+                <span class="step-pill is-active" id="step-pill-1"></span>
+                <span class="step-pill" id="step-pill-2"></span>
+              </div>
+            </div>
+
+            <!-- ==============================================================
+                 STEP 1: TECHNICAL & SITUATION QUALIFICATION (PROGRESSIVE)
+                 ============================================================== -->
+            <div class="form-step-pane is-active" id="form-step-1">
+              <!-- B2C STEP 1 FIELDS -->
+              <div class="b2c-only">
+                <div class="field-group">
+                  <label class="field-label">
+                    1. Quel est le type de votre logement ? <span class="field-required">*</span>
+                  </label>
+                  <div class="options-grid options-grid--2col" role="radiogroup" aria-label="Type de bien">
+                    <label class="option-card-label">
+                      <input type="radio" name="b2c_property_type" value="Villa" />
+                      <span>Villa</span>
+                    </label>
+                    <label class="option-card-label">
+                      <input type="radio" name="b2c_property_type" value="Appartement avec accès terrasse/toiture" />
+                      <span>Appartement (avec accès toit/terrasse)</span>
+                    </label>
+                    <label class="option-card-label">
+                      <input type="radio" name="b2c_property_type" value="Appartement sans accès toiture" />
+                      <span>Appartement (sans accès toiture)</span>
+                    </label>
+                    <label class="option-card-label">
+                      <input type="radio" name="b2c_property_type" value="Autre logement" />
+                      <span>Autre logement</span>
+                    </label>
+                  </div>
+                  <div class="field-error-msg" id="error-b2c-property">Veuillez sélectionner le type de votre logement.</div>
+                </div>
+
+                <!-- Conditional Guidance Callout when "Appartement sans accès toiture" is selected -->
+                <div class="smart-guidance-callout" id="no-roof-guidance" role="status" aria-live="polite">
+                  <div class="smart-guidance-callout__title">
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.3"><path d="M12 22c5.523 0 10-4.477 10-10S17.523 2 12 2 2 6.477 2 12s4.477 10 10 10z"/><path d="m9 12 2 2 4-4"/></svg>
+                    <span>Appartement sans accès toiture identifié</span>
+                  </div>
+                  <p>
+                    Le <strong>chauffe-eau thermodynamique</strong> (installé en buanderie ou espace ventilé) ou un chauffe-eau électrique/préparateur adapté sont parfaitement indiqués sans capteur en toiture.
+                  </p>
+                  <a href="#card-thermodynamique" class="smart-guidance-callout__link js-highlight-thermo">
+                    Voir le chauffe-eau thermodynamique ↑
+                  </a>
+                </div>
+
+                <div class="field-group">
+                  <label class="field-label">
+                    2. Quel est votre besoin thermique principal ? <span class="field-required">*</span>
+                  </label>
+                  <div class="options-grid options-grid--2col" role="radiogroup" aria-label="Besoin thermique principal">
+                    <label class="option-card-label">
+                      <input type="radio" name="b2c_main_need" value="Eau chaude sanitaire" />
+                      <span>Eau chaude sanitaire</span>
+                    </label>
+                    <label class="option-card-label">
+                      <input type="radio" name="b2c_main_need" value="Chauffage du logement" />
+                      <span>Chauffage du logement</span>
+                    </label>
+                    <label class="option-card-label">
+                      <input type="radio" name="b2c_main_need" value="Chauffage de piscine" />
+                      <span>Chauffage de piscine</span>
+                    </label>
+                    <label class="option-card-label">
+                      <input type="radio" name="b2c_main_need" value="Plusieurs besoins combinés" />
+                      <span>Plusieurs besoins combinés</span>
+                    </label>
+                  </div>
+                  <div class="field-error-msg" id="error-b2c-need">Veuillez indiquer votre besoin thermique principal.</div>
+                </div>
+
+                <!-- Progressive Disclosure: Bathrooms count only shown when relevant (Hot Water or Combined) -->
+                <div class="field-group" id="b2c-bathrooms-group" style="display:none;">
+                  <label class="field-label">
+                    3. Combien de salles de bain souhaitez-vous alimenter en eau chaude ?
+                  </label>
+                  <span class="field-hint">Cela aide notre conseiller à estimer la capacité de stockage adaptée.</span>
+                  <div class="options-grid options-grid--3col">
+                    <label class="option-card-label">
+                      <input type="radio" name="b2c_bathrooms" value="1 salle de bain" />
+                      <span>1 salle de bain</span>
+                    </label>
+                    <label class="option-card-label">
+                      <input type="radio" name="b2c_bathrooms" value="2 salles de bain" />
+                      <span>2 salles de bain</span>
+                    </label>
+                    <label class="option-card-label">
+                      <input type="radio" name="b2c_bathrooms" value="3 salles de bain ou plus" />
+                      <span>3 ou plus</span>
+                    </label>
+                  </div>
+                </div>
+              </div>
+
+              <!-- B2B STEP 1 FIELDS -->
+              <div class="b2b-only">
+                <div class="field-group">
+                  <label class="field-label">
+                    1. Quelle est la nature de votre projet ou activité ? <span class="field-required">*</span>
+                  </label>
+                  <div class="options-grid options-grid--2col" role="radiogroup" aria-label="Typologie de projet professionnel">
+                    <label class="option-card-label">
+                      <input type="radio" name="b2b_project_type" value="Promotion immobilière" />
+                      <span>Promotion immobilière</span>
+                    </label>
+                    <label class="option-card-label">
+                      <input type="radio" name="b2b_project_type" value="Hôtel / Établissement touristique" />
+                      <span>Hôtel / Établissement touristique</span>
+                    </label>
+                    <label class="option-card-label">
+                      <input type="radio" name="b2b_project_type" value="Projet institutionnel / Tertiaire" />
+                      <span>Institution / Bâtiment tertiaire</span>
+                    </label>
+                    <label class="option-card-label">
+                      <input type="radio" name="b2b_project_type" value="Entreprise de construction / Lotissement" />
+                      <span>Entreprise de construction / Chantier</span>
+                    </label>
+                    <label class="option-card-label">
+                      <input type="radio" name="b2b_project_type" value="Revendeur / Installateur professionnel" />
+                      <span>Revendeur / Installateur pro</span>
+                    </label>
+                    <label class="option-card-label">
+                      <input type="radio" name="b2b_project_type" value="Autre projet professionnel" />
+                      <span>Autre projet professionnel</span>
+                    </label>
+                  </div>
+                  <div class="field-error-msg" id="error-b2b-project">Veuillez sélectionner la typologie de votre projet.</div>
+                </div>
+
+                <div class="field-group">
+                  <label class="field-label">
+                    2. Lot(s) ou famille(s) thermique(s) concerné(s) : <span class="field-required">*</span>
+                  </label>
+                  <div class="options-grid options-grid--2col" role="radiogroup" aria-label="Besoin thermique professionnel">
+                    <label class="option-card-label">
+                      <input type="radio" name="b2b_thermal_need" value="Production d'eau chaude sanitaire (ECS)" />
+                      <span>Production d'ECS (Solaire / Thermodynamique / Électrique)</span>
+                    </label>
+                    <label class="option-card-label">
+                      <input type="radio" name="b2b_thermal_need" value="Ballons de stockage grande capacité & préparateurs" />
+                      <span>Ballons grande capacité &amp; préparateurs</span>
+                    </label>
+                    <label class="option-card-label">
+                      <input type="radio" name="b2b_thermal_need" value="Chauffage central & Chaudières (Sime)" />
+                      <span>Chauffage central &amp; Chaudières (Sime)</span>
+                    </label>
+                    <label class="option-card-label">
+                      <input type="radio" name="b2b_thermal_need" value="Pompes à chaleur (Chauffage / Piscine)" />
+                      <span>Pompes à chaleur (Chauffage / Piscine)</span>
+                    </label>
+                    <label class="option-card-label" style="grid-column: 1 / -1;">
+                      <input type="radio" name="b2b_thermal_need" value="Plusieurs lots thermiques combinés" />
+                      <span>Plusieurs lots thermiques combinés / Approvisionnement multi-gammes</span>
+                    </label>
+                  </div>
+                  <div class="field-error-msg" id="error-b2b-need">Veuillez sélectionner le lot thermique concerné.</div>
+                </div>
+
+                <div class="field-group">
+                  <label for="b2b-scope" class="field-label">
+                    3. Envergure estimée du projet ou quantités (Optionnel)
+                  </label>
+                  <input 
+                    type="text" 
+                    id="b2b-scope" 
+                    name="b2b_scope" 
+                    class="form-input" 
+                    placeholder="Ex. : Immeuble R+4 (24 appartements), Hôtel 40 chambres, demande catalogue revendeur..." 
+                  />
+                </div>
+              </div>
+
+              <!-- Shared Optional Pre-selected Solution Pill -->
+              <div class="field-group" id="preselected-solution-banner" style="display:none; background:var(--bg-stone); padding:12px 16px; border-radius:var(--radius-sm); border:1px solid var(--border-strong);">
+                <div style="display:flex; align-items:center; justify-content:space-between; gap:8px;">
+                  <span style="font-size:0.84rem;">
+                    <strong>Équipement repéré :</strong> <span id="preselected-solution-text"></span>
+                  </span>
+                  <button type="button" id="clear-preselected-solution" style="font-size:0.78rem; text-decoration:underline; color:var(--text-muted);">Retirer</button>
+                </div>
+                <input type="hidden" id="selected-solution-input" name="selected_solution_interest" value="" />
+              </div>
+
+              <div class="form-actions-bar">
+                <span style="font-size:0.8rem; color:var(--text-muted);">Étape 1/2 • Sans engagement</span>
+                <button type="button" class="btn btn--primary" id="btn-to-step-2">
+                  <span>Continuer vers vos coordonnées</span>
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M5 12h14M13 5l7 7-7 7"/></svg>
+                </button>
+              </div>
+            </div>
+
+            <!-- ==============================================================
+                 STEP 2: CONTACT DETAILS & TIMELINE
+                 ============================================================== -->
+            <div class="form-step-pane" id="form-step-2">
+              <div class="form-row-2col">
+                <div class="field-group">
+                  <label for="lead-name" class="field-label">
+                    Nom complet <span class="field-required">*</span>
+                  </label>
+                  <input 
+                    type="text" 
+                    id="lead-name" 
+                    name="full_name" 
+                    class="form-input" 
+                    autocomplete="name" 
+                    placeholder="Votre nom et prénom" 
+                    required 
+                  />
+                  <div class="field-error-msg" id="error-name">Veuillez renseigner votre nom complet.</div>
+                </div>
+
+                <div class="field-group">
+                  <label for="lead-phone" class="field-label">
+                    Téléphone / WhatsApp <span class="field-required">*</span>
+                  </label>
+                  <input 
+                    type="tel" 
+                    id="lead-phone" 
+                    name="phone" 
+                    class="form-input" 
+                    autocomplete="tel" 
+                    inputmode="tel"
+                    placeholder="Ex. : 06 61 00 00 00 ou +212 6..." 
+                    required 
+                  />
+                  <div class="field-error-msg" id="error-phone">Veuillez entrer un numéro de téléphone valide (ex. 06... / +212...).</div>
+                </div>
+              </div>
+
+              <!-- B2B Only Contact Fields -->
+              <div class="form-row-2col b2b-only">
+                <div class="field-group">
+                  <label for="b2b-company" class="field-label">
+                    Société / Organisme <span class="field-required">*</span>
+                  </label>
+                  <input 
+                    type="text" 
+                    id="b2b-company" 
+                    name="b2b_company" 
+                    class="form-input" 
+                    autocomplete="organization"
+                    placeholder="Nom de votre entreprise ou cabinet" 
+                  />
+                  <div class="field-error-msg" id="error-company">Veuillez indiquer le nom de votre société ou organisme.</div>
+                </div>
+
+                <div class="field-group">
+                  <label for="b2b-role" class="field-label">
+                    Votre fonction <span class="field-required">*</span>
+                  </label>
+                  <select id="b2b-role" name="b2b_role" class="form-select">
+                    <option value="">Sélectionnez votre fonction...</option>
+                    <option value="Promoteur immobilier / Maître d'ouvrage">Promoteur immobilier / Maître d'ouvrage</option>
+                    <option value="Architecte / Bureau d'études (BET)">Architecte / Bureau d'études (BET)</option>
+                    <option value="Direction / Acheteur Hôtellerie & Tertiaire">Direction / Acheteur Hôtellerie &amp; Tertiaire</option>
+                    <option value="Ingénieur / Conducteur de travaux">Ingénieur / Conducteur de travaux</option>
+                    <option value="Installateur / Revendeur professionnel">Installateur / Revendeur professionnel</option>
+                    <option value="Autre fonction professionnelle">Autre fonction professionnelle</option>
+                  </select>
+                  <div class="field-error-msg" id="error-role">Veuillez préciser votre fonction professionnelle.</div>
+                </div>
+              </div>
+
+              <div class="field-group b2b-only">
+                <label for="b2b-ice" class="field-label">
+                  ICE (Identifiant Commun de l'Entreprise)
+                </label>
+                <input 
+                  type="text" 
+                  id="b2b-ice" 
+                  name="b2b_ice" 
+                  class="form-input" 
+                  inputmode="numeric"
+                  maxlength="15"
+                  placeholder="Ex. : 001234567000089 (15 chiffres)" 
+                />
+                <div class="field-error-msg" id="error-ice">L'ICE doit comporter exactement 15 chiffres s'il est renseigné.</div>
+              </div>
+
+              <div class="form-row-2col">
+                <div class="field-group">
+                  <label for="lead-city" class="field-label">
+                    Ville du logement ou du projet <span class="field-required">*</span>
+                  </label>
+                  <input 
+                    type="text" 
+                    id="lead-city" 
+                    name="city" 
+                    class="form-input" 
+                    list="morocco-cities"
+                    placeholder="Casablanca, Rabat, Marrakech, Tanger..." 
+                    required 
+                  />
+                  <datalist id="morocco-cities">
+                    <option value="Casablanca"></option>
+                    <option value="Rabat"></option>
+                    <option value="Salé"></option>
+                    <option value="Témara"></option>
+                    <option value="Mohammédia"></option>
+                    <option value="Marrakech"></option>
+                    <option value="Tanger"></option>
+                    <option value="Fès"></option>
+                    <option value="Meknès"></option>
+                    <option value="Agadir"></option>
+                    <option value="Kénitra"></option>
+                    <option value="El Jadida"></option>
+                    <option value="Oujda"></option>
+                  </datalist>
+                  <div class="field-error-msg" id="error-city">Veuillez indiquer la ville concernée.</div>
+                </div>
+
+                <div class="field-group">
+                  <label for="lead-timeline" class="field-label">
+                    Horizon du besoin (Optionnel)
+                  </label>
+                  <select id="lead-timeline" name="timeline" class="form-select">
+                    <option value="Non précisé">Sélectionnez un délai indicatif...</option>
+                    <option value="Besoin actuel / Court terme">Besoin actuel / Court terme</option>
+                    <option value="Dans 1 à 3 mois">Dans 1 à 3 mois</option>
+                    <option value="Projet en phase d'étude / construction (+3 mois)">En phase d'étude ou construction (+3 mois)</option>
+                  </select>
+                </div>
+              </div>
+
+              <div class="field-group">
+                <label for="lead-notes" class="field-label">
+                  Précisions complémentaires (Optionnel)
+                </label>
+                <textarea 
+                  id="lead-notes" 
+                  name="notes" 
+                  rows="2" 
+                  class="form-textarea" 
+                  placeholder="Contraintes particulières, question sur un modèle, créneau de rappel souhaité..."
+                ></textarea>
+              </div>
+
+              <div class="field-group">
+                <label class="consent-label">
+                  <input type="checkbox" id="lead-consent" name="privacy_consent" required />
+                  <span>
+                    J'accepte que mes informations soient utilisées par Batitherm exclusivement pour étudier mon besoin thermique et me recontacter. <button type="button" id="open-privacy-modal" style="text-decoration:underline; font-weight:700;">Politique de confidentialité</button>. <span class="field-required">*</span>
+                  </span>
+                </label>
+                <div class="field-error-msg" id="error-consent">Veuillez accepter d'être recontacté par Batitherm pour soumettre votre demande.</div>
+              </div>
+
+              <div class="form-actions-bar">
+                <button type="button" class="btn btn--secondary" id="btn-back-step-1">
+                  ← Retour
+                </button>
+                <button type="submit" class="btn btn--primary" id="btn-submit-lead">
+                  <span class="b2c-only">Envoyer ma demande</span>
+                  <span class="b2b-only">Transmettre mon projet</span>
+                </button>
+              </div>
+            </div>
+          </form>
+
+          <!-- Honest Confirmation & Handoff State -->
+          <div class="form-confirmation-state" id="form-confirmation-box" role="region" aria-live="polite">
+            <span class="confirmation-badge" id="confirmation-status-badge">Récapitulatif prêt</span>
+            <h3 style="font-family:var(--font-display); font-size:1.35rem; font-weight:800; margin-bottom:8px;" id="confirmation-heading">
+              Votre dossier de qualification a été structuré
+            </h3>
+            <p style="font-size:0.92rem; color:var(--text-secondary);" id="confirmation-description">
+              Retrouvez ci-dessous la synthèse des informations préparées pour l'équipe Batitherm.
+            </p>
+
+            <div class="payload-preview-box" id="payload-summary-container"></div>
+
+            <div style="display:flex; flex-wrap:wrap; gap:12px; margin-top:20px;">
+              <a href="#" id="whatsapp-handoff-btn" class="btn btn--primary" style="display:none;" target="_blank" rel="noopener noreferrer">
+                Transmettre directement sur WhatsApp
+              </a>
+              <button type="button" class="btn btn--secondary" id="btn-reset-form">
+                Modifier mes réponses
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ======================================================================
+         SECTION 8 — LOCATIONS & FINAL CONVERSION SECTION
+         ====================================================================== -->
+    <section class="locations-section" id="implantations">
+      <div class="container">
+        <div class="tech-eyebrow">
+          <span class="tech-eyebrow__dot"></span>
+          <span>PRÉSENCE NATIONALE</span>
+        </div>
+        <h2 class="section-title">Nos implantations au Maroc</h2>
+
+        <div class="locations-grid">
+          <article class="location-card">
+            <div class="location-card__role">Siège Social &amp; Showroom</div>
+            <h3 class="location-card__city">Casablanca</h3>
+            <address class="location-card__address">
+              <strong>Boulevard Sidi Abderrahman</strong><br />
+              Casablanca, Maroc
+            </address>
+          </article>
+
+          <article class="location-card">
+            <div class="location-card__role">Succursale Régionale</div>
+            <h3 class="location-card__city">Rabat</h3>
+            <address class="location-card__address">
+              <strong>Zone Industrielle Takadoum</strong><br />
+              Rabat, Maroc
+            </address>
+          </article>
+
+          <article class="location-card">
+            <div class="location-card__role">Réseau National</div>
+            <h3 class="location-card__city">+44 Revendeurs &amp; Enseignes</h3>
+            <div class="location-card__address">
+              Présence via plus de <strong>44 revendeurs partenaires</strong> ainsi que chez <strong>Marjane</strong> et <strong>Bricoma</strong>.
+            </div>
+          </article>
+        </div>
+
+        <div class="final-cta-banner">
+          <div>
+            <h3 style="font-family:var(--font-display); font-size:clamp(1.35rem, 2.2vw, 1.85rem); font-weight:800; margin-bottom:6px;">
+              Prêt à identifier votre solution thermique ?
+            </h3>
+            <p style="color:var(--text-muted-on-dark); font-size:0.95rem;">
+              Choisissez votre parcours pour transmettre vos critères à l'équipe Batitherm.
+            </p>
+          </div>
+          <div style="display:flex; flex-wrap:wrap; gap:12px;">
+            <a href="#qualification-form" class="btn btn--primary js-audience-trigger" data-target="b2c">
+              Parcours Particulier
+            </a>
+            <a href="#qualification-form" class="btn btn--blue js-audience-trigger" data-target="b2b">
+              Parcours Professionnel
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ========================================================================
+       SECTION 9 — FOOTER
+       ======================================================================== -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div>
+          <div class="footer-heading">BATITHERM MAROC (Depuis 1999)</div>
+          <p style="margin-bottom:12px; max-width:42ch;">
+            Spécialiste des solutions d'eau chaude sanitaire et de chauffage pour particuliers et professionnels au Maroc.
+          </p>
+          <p lang="ar" dir="rtl" style="color:#FFFFFF; font-weight:700;">
+            « من الراحة إلى الأمان، باتيتيرم توفر كل ما يلزمكم »
+          </p>
+        </div>
+
+        <div>
+          <div class="footer-heading">Solutions Thermiques</div>
+          <ul class="footer-links">
+            <li><a href="#gamme-thermique">Chauffe-eaux thermodynamiques</a></li>
+            <li><a href="#gamme-thermique">Capteurs solaires thermiques</a></li>
+            <li><a href="#gamme-thermique">Ballons de stockage &amp; Préparateurs</a></li>
+            <li><a href="#gamme-thermique">Chauffe-eaux électriques</a></li>
+            <li><a href="#gamme-thermique">Pompes à chaleur (Chauffage &amp; Piscine)</a></li>
+            <li><a href="#gamme-thermique">Chaudières Sime &amp; Sèche-serviettes</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <div class="footer-heading">Implantations &amp; Liens</div>
+          <ul class="footer-links">
+            <li>Casablanca : Boulevard Sidi Abderrahman</li>
+            <li>Rabat : Zone Industrielle Takadoum</li>
+            <li>Site officiel : <a href="https://batitherm.ma/" target="_blank" rel="noopener noreferrer">batitherm.ma</a></li>
+            <li><button type="button" id="footer-privacy-link" style="text-decoration:underline; color:inherit;">Politique de confidentialité</button></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <span>© 1999–2026 BATITHERM. Tous droits réservés.</span>
+        <span>Solutions thermiques — Eau chaude sanitaire &amp; Chauffage.</span>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Privacy Policy Modal -->
+  <div class="privacy-modal-backdrop" id="privacy-modal" role="dialog" aria-modal="true" aria-labelledby="privacy-modal-title">
+    <div class="privacy-modal">
+      <h3 id="privacy-modal-title" style="font-family:var(--font-display); font-size:1.25rem; font-weight:800; margin-bottom:12px;">
+        Protection des données &amp; Confidentialité
+      </h3>
+      <p style="font-size:0.9rem; color:var(--text-secondary); margin-bottom:16px;">
+        Les informations recueillies via ce formulaire sont destinées exclusivement aux équipes de <strong>BATITHERM</strong> afin d'étudier votre besoin thermique et de vous recontacter, conformément à la loi 09-08.
+      </p>
+      <button type="button" class="btn btn--primary" id="close-privacy-modal">Fermer</button>
+    </div>
+  </div>
+
+  <!-- ========================================================================
+       JAVASCRIPT — UNTOUCHED BASE CODE, VALIDATION & GOOGLE SHEETS CONNECTION
+       ======================================================================== -->
+  <script>
+    /**
+     * ========================================================================
+     * 1. CONFIGURATION & INTEGRATION LAYER (GOOGLE APPS SCRIPT READY)
+     * ========================================================================
+     */
+    const BATITHERM_INTEGRATION_CONFIG = {
+      // URL Web App Google Apps Script (le même script gère Batitherm et SolarWatt automatiquement)
+      formSubmissionEndpoint: "https://script.google.com/macros/s/AKfycbyhBYS6fttEtTz3NMiOZ8z7T3zahanZfroaHm7GfDt_YeV8wpcwHlYceoZDgnVKtCtH/exec",
+      
+      // Official WhatsApp Business Number in international format without '+' (e.g. "2126XXXXXXXX")
+      whatsappDestinationNumber: "",
+
+      // Analytics & Advertising Pixels (Only fired if configured and loaded)
+      metaPixelId: null,
+      googleAdsTagId: null,
+
+      // Official Privacy Policy URL (if external page exists on batitherm.ma)
+      privacyPolicyUrl: null,
+
+      // CRM Field Mapping dictionary for downstream synchronization
+      crmFieldMapping: {
+        audienceSegment: "lead_segment",          // 'B2C_PARTICULIER' | 'B2B_PROFESSIONNEL'
+        fullName: "contact_full_name",
+        phone: "contact_phone_whatsapp",
+        city: "project_city",
+        timeline: "project_timeline",
+        selectedProduct: "product_interest",
+        b2cPropertyType: "b2c_property_type",
+        b2cMainNeed: "b2c_thermal_need",
+        b2cBathrooms: "b2c_bathroom_count",
+        b2bCompany: "b2b_company_name",
+        b2bRole: "b2b_contact_role",
+        b2bIce: "b2b_company_ice",
+        b2bProjectType: "b2b_project_category",
+        b2bThermalLot: "b2b_thermal_lot",
+        b2bScope: "b2b_estimated_scope",
+        notes: "additional_notes",
+        consentGranted: "privacy_consent_granted"
+      }
+    };
+
+    function trackBatithermEvent(eventName, safeMetadata = {}) {
+      const sanitizedMeta = {
+        audience: document.body.getAttribute('data-audience') || 'b2c',
+        timestamp: new Date().toISOString(),
+        ...safeMetadata
+      };
+
+      console.info(`[Batitherm Tracking] Event: ${eventName}`, sanitizedMeta);
+
+      if (typeof window.dataLayer !== 'undefined' && Array.isArray(window.dataLayer)) {
+        window.dataLayer.push({
+          event: eventName,
+          ...sanitizedMeta
+        });
+      }
+
+      if (typeof window.fbq === 'function' && BATITHERM_INTEGRATION_CONFIG.metaPixelId) {
+        window.fbq('trackCustom', eventName, sanitizedMeta);
+      }
+    }
+
+    /**
+     * ========================================================================
+     * 2. APPLICATION STATE & DOM INITIALIZATION
+     * ========================================================================
+     */
+    document.addEventListener('DOMContentLoaded', () => {
+      const state = {
+        audience: 'b2c', // 'b2c' | 'b2b'
+        currentStep: 1,
+        formStarted: false
+      };
+
+      const audienceTriggers = document.querySelectorAll('.js-audience-trigger');
+      const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+      const mobileDrawer = document.getElementById('mobile-drawer');
+      const mobileLinks = document.querySelectorAll('.js-mobile-link');
+
+      const urlParams = new URLSearchParams(window.location.search);
+      const urlProfile = (urlParams.get('profil') || urlParams.get('audience') || '').toLowerCase();
+      if (urlProfile === 'pro' || urlProfile === 'b2b' || urlProfile === 'professionnel') {
+        setAudience('b2b', false);
+      } else if (urlProfile === 'particulier' || urlProfile === 'b2c') {
+        setAudience('b2c', false);
+      }
+
+      function setAudience(targetAudience, shouldTrack = true) {
+        if (targetAudience !== 'b2c' && targetAudience !== 'b2b') return;
+        state.audience = targetAudience;
+        document.body.setAttribute('data-audience', targetAudience);
+
+        audienceTriggers.forEach(btn => {
+          const isMatch = btn.getAttribute('data-target') === targetAudience;
+          if (btn.hasAttribute('aria-pressed')) {
+            btn.setAttribute('aria-pressed', isMatch ? 'true' : 'false');
+          }
+          if (btn.hasAttribute('aria-selected')) {
+            btn.setAttribute('aria-selected', isMatch ? 'true' : 'false');
+          }
+        });
+
+        clearAllValidationErrors();
+
+        if (shouldTrack) {
+          trackBatithermEvent('audience_selected', { selected_audience: targetAudience });
+        }
+      }
+
+      audienceTriggers.forEach(trigger => {
+        trigger.addEventListener('click', () => {
+          const target = trigger.getAttribute('data-target');
+          setAudience(target, true);
+        });
+      });
+
+      if (mobileMenuBtn && mobileDrawer) {
+        mobileMenuBtn.addEventListener('click', () => {
+          const isOpen = mobileDrawer.classList.toggle('is-open');
+          mobileMenuBtn.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
+        });
+
+        mobileLinks.forEach(link => {
+          link.addEventListener('click', () => {
+            mobileDrawer.classList.remove('is-open');
+            mobileMenuBtn.setAttribute('aria-expanded', 'false');
+          });
+        });
+      }
+
+      /**
+       * ======================================================================
+       * 3. CONDITIONAL B2C LOGIC (APARTMENT WITHOUT ROOF + BATHROOMS)
+       * ======================================================================
+       */
+      const b2cPropertyRadios = document.querySelectorAll('input[name="b2c_property_type"]');
+      const noRoofGuidance = document.getElementById('no-roof-guidance');
+      const b2cNeedRadios = document.querySelectorAll('input[name="b2c_main_need"]');
+      const bathroomsGroup = document.getElementById('b2c-bathrooms-group');
+
+      function evaluateB2CConditionals() {
+        const selectedProperty = document.querySelector('input[name="b2c_property_type"]:checked')?.value || '';
+        const selectedNeed = document.querySelector('input[name="b2c_main_need"]:checked')?.value || '';
+
+        if (selectedProperty === 'Appartement sans accès toiture') {
+          noRoofGuidance.classList.add('is-visible');
+          trackBatithermEvent('qualification_step_completed', {
+            condition: 'apartment_without_roof_detected'
+          });
+        } else {
+          noRoofGuidance.classList.remove('is-visible');
+        }
+
+        if (selectedNeed === 'Eau chaude sanitaire' || selectedNeed === 'Plusieurs besoins combinés') {
+          bathroomsGroup.style.display = 'block';
+        } else {
+          bathroomsGroup.style.display = 'none';
+        }
+      }
+
+      b2cPropertyRadios.forEach(radio => {
+        radio.addEventListener('change', () => {
+          markFormStarted();
+          evaluateB2CConditionals();
+          hideError('error-b2c-property');
+        });
+      });
+
+      b2cNeedRadios.forEach(radio => {
+        radio.addEventListener('change', () => {
+          markFormStarted();
+          evaluateB2CConditionals();
+          hideError('error-b2c-need');
+        });
+      });
+
+      const highlightThermoLink = document.querySelector('.js-highlight-thermo');
+      if (highlightThermoLink) {
+        highlightThermoLink.addEventListener('click', () => {
+          spotlightSolutionCard('card-thermodynamique');
+        });
+      }
+
+      function spotlightSolutionCard(cardId) {
+        document.querySelectorAll('.solution-card').forEach(c => {
+          c.classList.remove('is-hidden', 'is-spotlighted');
+        });
+        const targetCard = document.getElementById(cardId);
+        if (targetCard) {
+          targetCard.classList.add('is-spotlighted');
+          const panel = targetCard.querySelector('.solution-details-panel');
+          const btn = targetCard.querySelector('.js-accordion-btn');
+          if (panel && btn) {
+            panel.classList.add('is-open');
+            btn.setAttribute('aria-expanded', 'true');
+          }
+        }
+      }
+
+      /**
+       * ======================================================================
+       * 4. DIAGNOSTIC CARDS & SOLUTION CATALOGUE INTERACTIONS
+       * ======================================================================
+       */
+      document.querySelectorAll('.js-preset-action').forEach(btn => {
+        btn.addEventListener('click', () => {
+          const targetAudience = btn.getAttribute('data-audience');
+          setAudience(targetAudience, true);
+
+          if (targetAudience === 'b2c') {
+            const propVal = btn.getAttribute('data-property');
+            const needVal = btn.getAttribute('data-need');
+            if (propVal) {
+              const radio = document.querySelector(`input[name="b2c_property_type"][value="${propVal}"]`);
+              if (radio) radio.checked = true;
+            }
+            if (needVal) {
+              const radio = document.querySelector(`input[name="b2c_main_need"][value="${needVal}"]`);
+              if (radio) radio.checked = true;
+            }
+            evaluateB2CConditionals();
+          } else {
+            const projVal = btn.getAttribute('data-project');
+            const b2bNeedVal = btn.getAttribute('data-b2bneed');
+            if (projVal) {
+              const radio = document.querySelector(`input[name="b2b_project_type"][value="${projVal}"]`);
+              if (radio) radio.checked = true;
+            }
+            if (b2bNeedVal) {
+              const radio = document.querySelector(`input[name="b2b_thermal_need"][value="${b2bNeedVal}"]`);
+              if (radio) radio.checked = true;
+            }
+          }
+
+          const spotlightId = btn.getAttribute('data-spotlight');
+          if (spotlightId) {
+            spotlightSolutionCard(`card-${spotlightId}`);
+          }
+
+          document.getElementById('qualification-form').scrollIntoView({ behavior: 'smooth' });
+        });
+      });
+
+      const filterBtns = document.querySelectorAll('.filter-tab-btn');
+      const solutionCards = document.querySelectorAll('.solution-card');
+
+      filterBtns.forEach(btn => {
+        btn.addEventListener('click', () => {
+          const filter = btn.getAttribute('data-filter');
+          filterBtns.forEach(b => b.setAttribute('aria-selected', b === btn ? 'true' : 'false'));
+
+          solutionCards.forEach(card => {
+            const category = card.getAttribute('data-category');
+            if (filter === 'all' || category === filter) {
+              card.classList.remove('is-hidden');
+            } else {
+              card.classList.add('is-hidden');
+            }
+          });
+        });
+      });
+
+      document.querySelectorAll('.js-accordion-btn').forEach(btn => {
+        btn.addEventListener('click', () => {
+          const panel = btn.nextElementSibling;
+          const isOpen = panel.classList.toggle('is-open');
+          btn.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
+          btn.querySelector('span:last-child').textContent = isOpen ? '−' : '+';
+        });
+      });
+
+      const preselectedBanner = document.getElementById('preselected-solution-banner');
+      const preselectedText = document.getElementById('preselected-solution-text');
+      const preselectedInput = document.getElementById('selected-solution-input');
+      const clearPreselectedBtn = document.getElementById('clear-preselected-solution');
+
+      document.querySelectorAll('.js-select-solution').forEach(btn => {
+        btn.addEventListener('click', () => {
+          const solName = btn.getAttribute('data-solution');
+          const needB2C = btn.getAttribute('data-need-b2c');
+          const needB2B = btn.getAttribute('data-need-b2b');
+
+          preselectedText.textContent = solName;
+          preselectedInput.value = solName;
+          preselectedBanner.style.display = 'block';
+
+          if (state.audience === 'b2c' && needB2C) {
+            const radio = document.querySelector(`input[name="b2c_main_need"][value="${needB2C}"]`);
+            if (radio && !document.querySelector('input[name="b2c_main_need"]:checked')) {
+              radio.checked = true;
+              evaluateB2CConditionals();
+            }
+          } else if (state.audience === 'b2b' && needB2B) {
+            const radio = document.querySelector(`input[name="b2b_thermal_need"][value="${needB2B}"]`);
+            if (radio && !document.querySelector('input[name="b2b_thermal_need"]:checked')) {
+              radio.checked = true;
+            }
+          }
+
+          trackBatithermEvent('solution_selected', { solution_category: solName });
+          document.getElementById('qualification-form').scrollIntoView({ behavior: 'smooth' });
+        });
+      });
+
+      if (clearPreselectedBtn) {
+        clearPreselectedBtn.addEventListener('click', () => {
+          preselectedInput.value = '';
+          preselectedBanner.style.display = 'none';
+        });
+      }
+
+      /**
+       * ======================================================================
+       * 5. PROGRESSIVE FORM NAVIGATION & VALIDATION
+       * ======================================================================
+       */
+      const leadForm = document.getElementById('batitherm-lead-form');
+      const step1Pane = document.getElementById('form-step-1');
+      const step2Pane = document.getElementById('form-step-2');
+      const stepLabel = document.getElementById('form-step-label');
+      const stepPill1 = document.getElementById('step-pill-1');
+      const stepPill2 = document.getElementById('step-pill-2');
+      const btnToStep2 = document.getElementById('btn-to-step-2');
+      const btnBackStep1 = document.getElementById('btn-back-step-1');
+      const confirmationBox = document.getElementById('form-confirmation-box');
+      const btnResetForm = document.getElementById('btn-reset-form');
+
+      function markFormStarted() {
+        if (!state.formStarted) {
+          state.formStarted = true;
+          trackBatithermEvent('form_start');
+        }
+      }
+
+      function showError(errorId, inputEl = null) {
+        const err = document.getElementById(errorId);
+        if (err) err.classList.add('is-visible');
+        if (inputEl) inputEl.setAttribute('aria-invalid', 'true');
+      }
+
+      function hideError(errorId, inputEl = null) {
+        const err = document.getElementById(errorId);
+        if (err) err.classList.remove('is-visible');
+        if (inputEl) inputEl.removeAttribute('aria-invalid');
+      }
+
+      function clearAllValidationErrors() {
+        document.querySelectorAll('.field-error-msg').forEach(el => el.classList.remove('is-visible'));
+        document.querySelectorAll('[aria-invalid="true"]').forEach(el => el.removeAttribute('aria-invalid'));
+      }
+
+      function goToFormStep(stepNumber) {
+        state.currentStep = stepNumber;
+        if (stepNumber === 1) {
+          step1Pane.classList.add('is-active');
+          step2Pane.classList.remove('is-active');
+          stepLabel.textContent = 'Étape 1 sur 2 — Qualification du besoin';
+          stepPill1.classList.add('is-active');
+          stepPill2.classList.remove('is-active');
+        } else {
+          step1Pane.classList.remove('is-active');
+          step2Pane.classList.add('is-active');
+          stepLabel.textContent = 'Étape 2 sur 2 — Coordonnées de contact';
+          stepPill1.classList.add('is-active');
+          stepPill2.classList.add('is-active');
+        }
+      }
+
+      function validateStep1() {
+        clearAllValidationErrors();
+        let isValid = true;
+
+        if (state.audience === 'b2c') {
+          const propChecked = document.querySelector('input[name="b2c_property_type"]:checked');
+          const needChecked = document.querySelector('input[name="b2c_main_need"]:checked');
+          if (!propChecked) {
+            showError('error-b2c-property');
+            isValid = false;
+          }
+          if (!needChecked) {
+            showError('error-b2c-need');
+            isValid = false;
+          }
+        } else {
+          const projChecked = document.querySelector('input[name="b2b_project_type"]:checked');
+          const lotChecked = document.querySelector('input[name="b2b_thermal_need"]:checked');
+          if (!projChecked) {
+            showError('error-b2b-project');
+            isValid = false;
+          }
+          if (!lotChecked) {
+            showError('error-b2b-need');
+            isValid = false;
+          }
+        }
+
+        if (!isValid) {
+          trackBatithermEvent('form_validation_error', { step: 1 });
+        }
+        return isValid;
+      }
+
+      function isValidPhone(rawPhone) {
+        const cleaned = rawPhone.replace(/[\s.\-()]/g, '');
+        const moroccanRegex = /^(?:(?:\+|00)212|0)[5-8]\d{8}$/;
+        const internationalFallback = /^\+?\d{8,15}$/;
+        return moroccanRegex.test(cleaned) || internationalFallback.test(cleaned);
+      }
+
+      function validateStep2() {
+        clearAllValidationErrors();
+        let isValid = true;
+
+        const nameInput = document.getElementById('lead-name');
+        const phoneInput = document.getElementById('lead-phone');
+        const cityInput = document.getElementById('lead-city');
+        const consentInput = document.getElementById('lead-consent');
+
+        if (!nameInput.value.trim() || nameInput.value.trim().length < 2) {
+          showError('error-name', nameInput);
+          isValid = false;
+        }
+
+        if (!isValidPhone(phoneInput.value.trim())) {
+          showError('error-phone', phoneInput);
+          isValid = false;
+        }
+
+        if (state.audience === 'b2b') {
+          const companyInput = document.getElementById('b2b-company');
+          const roleSelect = document.getElementById('b2b-role');
+          const iceInput = document.getElementById('b2b-ice');
+          if (!companyInput.value.trim()) {
+            showError('error-company', companyInput);
+            isValid = false;
+          }
+          if (!roleSelect.value) {
+            showError('error-role', roleSelect);
+            isValid = false;
+          }
+          const cleanedIce = iceInput.value.replace(/\s+/g, '');
+          if (cleanedIce && !/^\d{15}$/.test(cleanedIce)) {
+            showError('error-ice', iceInput);
+            isValid = false;
+          }
+        }
+
+        if (!cityInput.value.trim()) {
+          showError('error-city', cityInput);
+          isValid = false;
+        }
+
+        if (!consentInput.checked) {
+          showError('error-consent', consentInput);
+          isValid = false;
+        }
+
+        if (!isValid) {
+          trackBatithermEvent('form_validation_error', { step: 2 });
+        }
+        return isValid;
+      }
+
+      btnToStep2.addEventListener('click', () => {
+        markFormStarted();
+        if (validateStep1()) {
+          trackBatithermEvent('qualification_step_completed', { step: 1 });
+          goToFormStep(2);
+        }
+      });
+
+      btnBackStep1.addEventListener('click', () => {
+        goToFormStep(1);
+      });
+
+      /**
+       * ======================================================================
+       * 6. FORM SUBMISSION & HONEST HANDOFF ARCHITECTURE
+       * ======================================================================
+       */
+      leadForm.addEventListener('submit', async (e) => {
+        e.preventDefault();
+        if (!validateStep1()) {
+          goToFormStep(1);
+          return;
+        }
+        if (!validateStep2()) {
+          return;
+        }
+
+        const isB2C = state.audience === 'b2c';
+        const leadPayload = {
+          lead_segment: isB2C ? 'B2C_PARTICULIER' : 'B2B_PROFESSIONNEL',
+          submitted_at: new Date().toISOString(),
+          contact_full_name: document.getElementById('lead-name').value.trim(),
+          contact_phone_whatsapp: document.getElementById('lead-phone').value.trim(),
+          project_city: document.getElementById('lead-city').value.trim(),
+          project_timeline: document.getElementById('lead-timeline').value,
+          product_interest: document.getElementById('selected-solution-input').value || 'À définir lors de l’échange',
+          additional_notes: document.getElementById('lead-notes').value.trim() || 'Aucune',
+          privacy_consent_granted: true
+        };
+
+        if (isB2C) {
+          leadPayload.b2c_property_type = document.querySelector('input[name="b2c_property_type"]:checked')?.value || '';
+          leadPayload.b2c_thermal_need = document.querySelector('input[name="b2c_main_need"]:checked')?.value || '';
+          leadPayload.b2c_bathroom_count = document.querySelector('input[name="b2c_bathrooms"]:checked')?.value || 'Non applicable / Non précisé';
+        } else {
+          leadPayload.b2b_company_name = document.getElementById('b2b-company').value.trim();
+          leadPayload.b2b_contact_role = document.getElementById('b2b-role').value;
+          leadPayload.b2b_company_ice = document.getElementById('b2b-ice').value.replace(/\s+/g, '') || 'Non renseigné';
+          leadPayload.b2b_project_category = document.querySelector('input[name="b2b_project_type"]:checked')?.value || '';
+          leadPayload.b2b_thermal_lot = document.querySelector('input[name="b2b_thermal_need"]:checked')?.value || '';
+          leadPayload.b2b_estimated_scope = document.getElementById('b2b-scope').value.trim() || 'Non précisé';
+        }
+
+        const submitBtn = document.getElementById('btn-submit-lead');
+        const originalBtnHtml = submitBtn.innerHTML;
+        submitBtn.disabled = true;
+        submitBtn.innerHTML = '<span>Envoi en cours...</span>';
+
+        let deliveredToServer = false;
+        const endpoint = (BATITHERM_INTEGRATION_CONFIG.formSubmissionEndpoint || '').trim();
+
+        if (endpoint) {
+          try {
+            await fetch(endpoint, {
+              method: 'POST',
+              mode: 'no-cors',
+              cache: 'no-cache',
+              redirect: 'follow',
+              headers: { 'Content-Type': 'text/plain;charset=utf-8' },
+              body: JSON.stringify(leadPayload)
+            });
+            deliveredToServer = true;
+          } catch (err) {
+            console.warn('[Batitherm Integration] Endpoint error:', err);
+          }
+        }
+
+        submitBtn.disabled = false;
+        submitBtn.innerHTML = originalBtnHtml;
+
+        trackBatithermEvent('lead_submission_processed', {
+          segment: leadPayload.lead_segment,
+          delivered_to_endpoint: deliveredToServer
+        });
+
+        renderConfirmationState(leadPayload, deliveredToServer);
+      });
+
+      function renderConfirmationState(payload, deliveredToServer) {
+        leadForm.style.display = 'none';
+        confirmationBox.classList.add('is-visible');
+        confirmationBox.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+
+        const statusBadge = document.getElementById('confirmation-status-badge');
+        const heading = document.getElementById('confirmation-heading');
+        const description = document.getElementById('confirmation-description');
+        const summaryContainer = document.getElementById('payload-summary-container');
+        const whatsappBtn = document.getElementById('whatsapp-handoff-btn');
+
+        if (deliveredToServer) {
+          statusBadge.textContent = 'Demande transmise à Batitherm';
+          statusBadge.style.background = 'var(--brand-green)';
+          statusBadge.style.color = '#FFFFFF';
+          heading.textContent = 'Merci, votre demande a bien été transmise à notre équipe.';
+          description.textContent = 'Un conseiller Batitherm analysera vos réponses ci-dessous avant de vous recontacter par téléphone ou WhatsApp.';
+        } else {
+          statusBadge.textContent = 'Qualification complétée (Mode Pré-intégration)';
+          statusBadge.style.background = 'var(--brand-yellow)';
+          statusBadge.style.color = 'var(--brand-black)';
+          heading.textContent = 'Votre fiche de qualification est prête';
+          description.textContent = 'Voici le récapitulatif exact des données structurées :';
+        }
+
+        const rows = [];
+        rows.push(['Profil', payload.lead_segment === 'B2C_PARTICULIER' ? 'Particulier (B2C)' : 'Professionnel (B2B)']);
+        rows.push(['Contact', `${payload.contact_full_name} (${payload.contact_phone_whatsapp})`]);
+        rows.push(['Ville', payload.project_city]);
+
+        if (payload.lead_segment === 'B2C_PARTICULIER') {
+          rows.push(['Type de logement', payload.b2c_property_type]);
+          rows.push(['Besoin thermique', payload.b2c_thermal_need]);
+          rows.push(['Salles de bain', payload.b2c_bathroom_count]);
+        } else {
+          rows.push(['Société & Fonction', `${payload.b2b_company_name} — ${payload.b2b_contact_role}`]);
+          rows.push(['ICE', payload.b2b_company_ice]);
+          rows.push(['Typologie projet', payload.b2b_project_category]);
+          rows.push(['Lot thermique', payload.b2b_thermal_lot]);
+          rows.push(['Envergure / Quantité', payload.b2b_estimated_scope]);
+        }
+
+        rows.push(['Équipement repéré', payload.product_interest]);
+        rows.push(['Horizon du projet', payload.project_timeline]);
+
+        summaryContainer.innerHTML = `<dl>${rows.map(([k, v]) => `<dt>${escapeHtml(k)}</dt><dd>${escapeHtml(v)}</dd>`).join('')}</dl>`;
+
+        if (BATITHERM_INTEGRATION_CONFIG.whatsappDestinationNumber) {
+          const waText = rows.map(([k, v]) => `*${k}:* ${v}`).join('\n');
+          const encoded = encodeURIComponent(`Bonjour BATITHERM, voici ma demande de qualification thermique :\n\n${waText}`);
+          whatsappBtn.href = `https://wa.me/${BATITHERM_INTEGRATION_CONFIG.whatsappDestinationNumber}?text=${encoded}`;
+          whatsappBtn.style.display = 'inline-flex';
+        } else {
+          whatsappBtn.style.display = 'none';
+        }
+      }
+
+      btnResetForm.addEventListener('click', () => {
+        confirmationBox.classList.remove('is-visible');
+        leadForm.style.display = 'block';
+        goToFormStep(1);
+      });
+
+      function escapeHtml(str) {
+        const div = document.createElement('div');
+        div.textContent = str || '';
+        return div.innerHTML;
+      }
+
+      /**
+       * ======================================================================
+       * 7. PRIVACY MODAL CONTROLS
+       * ======================================================================
+       */
+      const privacyModal = document.getElementById('privacy-modal');
+      const openPrivacyBtn = document.getElementById('open-privacy-modal');
+      const footerPrivacyBtn = document.getElementById('footer-privacy-link');
+      const closePrivacyBtn = document.getElementById('close-privacy-modal');
+
+      function openPrivacy() {
+        if (BATITHERM_INTEGRATION_CONFIG.privacyPolicyUrl) {
+          window.open(BATITHERM_INTEGRATION_CONFIG.privacyPolicyUrl, '_blank', 'noopener');
+          return;
+        }
+        privacyModal.classList.add('is-open');
+        closePrivacyBtn.focus();
+      }
+
+      function closePrivacy() {
+        privacyModal.classList.remove('is-open');
+      }
+
+      if (openPrivacyBtn) openPrivacyBtn.addEventListener('click', openPrivacy);
+      if (footerPrivacyBtn) footerPrivacyBtn.addEventListener('click', openPrivacy);
+      if (closePrivacyBtn) closePrivacyBtn.addEventListener('click', closePrivacy);
+
+      privacyModal.addEventListener('click', (e) => {
+        if (e.target === privacyModal) closePrivacy();
+      });
+
+      document.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape' && privacyModal.classList.contains('is-open')) {
+          closePrivacy();
+        }
+      });
+    });
+  </script>
+</body>
+</html>
